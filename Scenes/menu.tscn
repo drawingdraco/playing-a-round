@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b5iei24b3udwa"]
+
+[ext_resource type="Script" uid="uid://c1b5tuv6mua7p" path="res://scripts/menu.gd" id="1_pq6ve"]
+
+[node name="menu" type="Control" unique_id=1844195944]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pq6ve")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=265161587]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2140817469]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=823644135]
+layout_mode = 2
+text = "Play"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1288279643]
+layout_mode = 2
+text = "Options"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=846248305]
+layout_mode = 2
+text = "Exit"
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

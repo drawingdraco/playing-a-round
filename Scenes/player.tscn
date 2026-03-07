@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://8tuaytomgar"]
+
+[ext_resource type="Texture2D" uid="uid://ddrd0b4yli16p" path="res://sprites/Sprite-0001.png" id="1_4m14a"]
+[ext_resource type="Script" uid="uid://paucjor1o2dg" path="res://scripts/player topdown.gd" id="1_fkybt"]
+[ext_resource type="Texture2D" uid="uid://boe4k76fugbpp" path="res://sprites/Sprite-0002.png" id="2_b60pb"]
+[ext_resource type="Texture2D" uid="uid://ca03m80gupe5s" path="res://sprites/HeroPlaceholder.png" id="2_x3wgy"]
+[ext_resource type="Script" uid="uid://d4ddmsf8qh7kt" path="res://scripts/collision_shape_2d_2.gd" id="4_10p0q"]
+[ext_resource type="Texture2D" uid="uid://d5ewiww3w5c1" path="res://sprites/WitchPlaceholder.png" id="5_3smsa"]
+[ext_resource type="Texture2D" uid="uid://bdeg6farkny8o" path="res://icon.svg" id="5_sweqy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t3sd2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x3wgy")
+}],
+"loop": true,
+"name": &"Hero stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4m14a")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b60pb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_3smsa")
+}],
+"loop": true,
+"name": &"witch stand",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ockli"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5fhm"]
+size = Vector2(21, 32)
+
+[node name="Player" type="Area2D" unique_id=1651111682 groups=["Player"]]
+script = ExtResource("1_fkybt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1382175064]
+position = Vector2(4.7683716e-07, 1.4305115e-06)
+scale = Vector2(0.5, 0.50000006)
+sprite_frames = SubResource("SpriteFrames_t3sd2")
+animation = &"witch stand"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1689808667 groups=["Player"]]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ockli")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=758611204]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_x5fhm")
+script = ExtResource("4_10p0q")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D2" unique_id=1549686991]
+scale = Vector2(0.0722657, 0.1875)
+texture = ExtResource("5_sweqy")
+
+[node name="Timer" type="Timer" parent="." unique_id=1120412997]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
