@@ -13,10 +13,10 @@ func _ready() -> void:
 
 
 func _on_timer_timeout() -> void:
-	
-	var spawn = spawnpoints[randi() % spawnpoints.size()]
-	
-	var enemy = enemysc.instantiate()
-	enemy.position = spawn.global_position
-	main.add_child(enemy)
-	
+	if Global.enemy1 > 0:
+		var spawn = spawnpoints[randi() % spawnpoints.size()]
+		var enemy = enemysc.instantiate()
+		enemy.position = spawn.global_position
+		main.add_child(enemy)
+		Global.enemy1 -= 1
+		

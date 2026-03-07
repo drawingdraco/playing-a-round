@@ -3,7 +3,7 @@ extends CharacterBody2D
 var speed : int = 500
 var direction : Vector2
 var shot = false
-set_wait_time = 1.0
+
 func _physics_process(delta):
 	if (not shot):
 		direction = (get_global_mouse_position() - position)

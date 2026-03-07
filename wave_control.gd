@@ -1,9 +1,6 @@
-extends Node
+extends Control
 
-var choschar = 0
-var charlist = ["walk","Hero stand","witch stand"]
-var charhp = 3
-var enemy1 = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -12,3 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_start_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/bedroom.tscn")

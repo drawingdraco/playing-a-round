@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://em52olqg1pdg"]
 
+[ext_resource type="Script" uid="uid://cot6vtrff2iix" path="res://wave_control.gd" id="1_ga3b8"]
+[ext_resource type="Script" uid="uid://dajusxvb3ukjq" path="res://scripts/panel.gd" id="2_trxva"]
+[ext_resource type="Texture2D" uid="uid://c7rubqcwc14o7" path="res://sprites/0Num.png" id="3_v0lov"]
+
 [node name="Wave control" type="Control" unique_id=413652294]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +11,98 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ga3b8")
+
+[node name="Panel" type="Panel" parent="." unique_id=1169983510]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 378.0
+offset_right = 277.0
+offset_bottom = 463.0
+script = ExtResource("2_trxva")
+
+[node name="Button" type="Button" parent="Panel" unique_id=1774131736]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+
+[node name="Button2" type="Button" parent="Panel" unique_id=80808248]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 60.0
+offset_right = 76.0
+offset_bottom = 81.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel" unique_id=465883951]
+position = Vector2(64, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Panel" unique_id=1932106692]
+position = Vector2(40.26, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Panel" unique_id=1176796159]
+position = Vector2(14, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Button3" type="Button" parent="Panel" unique_id=1841976969]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 7.0
+offset_right = 51.0
+offset_bottom = 28.0
+
+[node name="Button4" type="Button" parent="Panel" unique_id=2063814851]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 60.0
+offset_right = 51.0
+offset_bottom = 81.0
+
+[node name="Button5" type="Button" parent="Panel" unique_id=1112349940]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 25.0
+offset_bottom = 28.0
+
+[node name="Button6" type="Button" parent="Panel" unique_id=1706763710]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 25.0
+offset_bottom = 81.0
+
+[node name="Panel2" type="Panel" parent="." unique_id=1971509550]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 79.0
+offset_right = 700.0
+offset_bottom = 521.0
+
+[node name="Panel3" type="Panel" parent="." unique_id=1918378669]
+layout_mode = 0
+offset_left = 753.0
+offset_top = 82.0
+offset_right = 1039.0
+offset_bottom = 524.0
+
+[node name="Start" type="Button" parent="." unique_id=1993416133]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 548.0
+offset_right = 805.0
+offset_bottom = 626.0
+text = "START"
+
+[connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="Panel" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="Panel" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Panel/Button4" to="Panel" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Panel/Button5" to="Panel" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Panel/Button6" to="Panel" method="_on_button_6_pressed"]
