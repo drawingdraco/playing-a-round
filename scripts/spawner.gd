@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var main = get_node("/root/Bedroom")
+@onready var main = get_node("/root/Bedroom/Spawner")
 
 var enemysc = preload("res://Scenes/enemy.tscn")
 var spawnpoints = []

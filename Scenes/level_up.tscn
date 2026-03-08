@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://vwvw8er1m02v"]
+
+[ext_resource type="Script" uid="uid://bmcb750xkkwla" path="res://scripts/level_up.gd" id="1_cv3ws"]
+
+[node name="Level_up" type="Control" unique_id=1805805435]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cv3ws")
+
+[node name="Panel" type="Panel" parent="." unique_id=1709236409]
+layout_mode = 0
+offset_left = -495.0
+offset_top = -255.0
+offset_right = 524.0
+offset_bottom = 252.0
+
+[node name="Button" type="Button" parent="Panel" unique_id=3614635]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 77.0
+offset_right = 971.0
+offset_bottom = 155.0
+
+[node name="Button2" type="Button" parent="Panel" unique_id=1672275447]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 223.0
+offset_right = 972.0
+offset_bottom = 301.0
+
+[node name="Button3" type="Button" parent="Panel" unique_id=1622651674]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 361.0
+offset_right = 970.0
+offset_bottom = 439.0
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]

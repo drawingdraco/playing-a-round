@@ -4,6 +4,8 @@ extends Area2D
 var screen_size # Size of the game window.
 var projectsc = preload("res://Scenes/projectile.tscn")
 @onready var main = get_node("/root/Bedroom")
+@onready var cam = get_node("/root/Bedroom/Player/Camera2D")
+var lvupsc = preload("res://Scenes/level_up.tscn")
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -44,6 +46,13 @@ func _process(delta):
 	if (Global.charhp <= 0):
 		print("ded")
 		get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+		
+	
+	if Global.pexp >= Global.to_next_level:
+		var lvup = lvupsc.instantiate()
+		lvup.position = get_child(0).position
+		cam.add_child(lvup)
+		Global.to_next_level = Global.to_next_level * 1.5
 
 
 

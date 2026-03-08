@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://em52olqg1pdg"]
 
-[ext_resource type="Script" uid="uid://cot6vtrff2iix" path="res://wave_control.gd" id="1_ga3b8"]
+[ext_resource type="Script" uid="uid://cot6vtrff2iix" path="res://scripts/wave_control.gd" id="1_ga3b8"]
 [ext_resource type="Script" uid="uid://dajusxvb3ukjq" path="res://scripts/panel.gd" id="2_trxva"]
 [ext_resource type="Texture2D" uid="uid://c7rubqcwc14o7" path="res://sprites/0Num.png" id="3_v0lov"]
 
@@ -106,3 +106,4 @@ text = "START"
 [connection signal="pressed" from="Panel/Button4" to="Panel" method="_on_button_4_pressed"]
 [connection signal="pressed" from="Panel/Button5" to="Panel" method="_on_button_5_pressed"]
 [connection signal="pressed" from="Panel/Button6" to="Panel" method="_on_button_6_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

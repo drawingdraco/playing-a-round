@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cybk2pcu6ic5e"]
 
-[ext_resource type="Script" uid="uid://cijyk8yvhdd3p" path="res://projectile.gd" id="1_yr2qt"]
-[ext_resource type="Texture2D" uid="uid://bdeg6farkny8o" path="res://icon.svg" id="2_tl4hk"]
+[ext_resource type="Script" uid="uid://cijyk8yvhdd3p" path="res://scripts/projectile.gd" id="1_yr2qt"]
+[ext_resource type="Texture2D" uid="uid://bobj461qrdl5k" path="res://sprites/grass.png" id="2_yr2qt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e1077"]
 animations = [{
@@ -12,7 +12,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_tl4hk")
+"texture": ExtResource("2_yr2qt")
 }],
 "loop": true,
 "name": &"new_animation",

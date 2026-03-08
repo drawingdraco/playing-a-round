@@ -5,38 +5,41 @@
 
 [node name="Bedroom" type="Node" unique_id=580997709]
 
+[node name="Spawner" type="Node2D" parent="." unique_id=2041397369]
+script = ExtResource("3_gru6s")
+
+[node name="Marker2D" type="Marker2D" parent="Spawner" unique_id=898833723]
+position = Vector2(-604, 0)
+
+[node name="Marker2D2" type="Marker2D" parent="Spawner" unique_id=1940103458]
+position = Vector2(1, 342)
+
+[node name="Marker2D3" type="Marker2D" parent="Spawner" unique_id=1826664365]
+position = Vector2(627, -2)
+
+[node name="Marker2D4" type="Marker2D" parent="Spawner" unique_id=1583601442]
+position = Vector2(-7, -350)
+
+[node name="Timer" type="Timer" parent="Spawner" unique_id=1869131935]
+autostart = true
+
+[node name="Marker2D6" type="Marker2D" parent="Spawner" unique_id=198683868]
+position = Vector2(-593, -342)
+
+[node name="Marker2D5" type="Marker2D" parent="Spawner" unique_id=865579014]
+position = Vector2(-593, 331)
+
+[node name="Marker2D7" type="Marker2D" parent="Spawner" unique_id=1235033035]
+position = Vector2(593, -353)
+
+[node name="Marker2D8" type="Marker2D" parent="Spawner" unique_id=1060438340]
+position = Vector2(620, 349)
+
 [node name="Player" parent="." unique_id=181147812 instance=ExtResource("2_gru6s")]
+
+[node name="Marker2D" type="Marker2D" parent="Player" unique_id=1143569547]
+position = Vector2(-571, -318)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=165789266]
 
-[node name="Spawner" type="Node2D" parent="Player" unique_id=2041397369]
-script = ExtResource("3_gru6s")
-
-[node name="Marker2D" type="Marker2D" parent="Player/Spawner" unique_id=898833723]
-position = Vector2(-604, 0)
-
-[node name="Marker2D2" type="Marker2D" parent="Player/Spawner" unique_id=1940103458]
-position = Vector2(1, 342)
-
-[node name="Marker2D3" type="Marker2D" parent="Player/Spawner" unique_id=1826664365]
-position = Vector2(627, -2)
-
-[node name="Marker2D4" type="Marker2D" parent="Player/Spawner" unique_id=1583601442]
-position = Vector2(-7, -350)
-
-[node name="Timer" type="Timer" parent="Player/Spawner" unique_id=1869131935]
-autostart = true
-
-[node name="Marker2D6" type="Marker2D" parent="Player/Spawner" unique_id=198683868]
-position = Vector2(-593, -342)
-
-[node name="Marker2D5" type="Marker2D" parent="Player/Spawner" unique_id=865579014]
-position = Vector2(-593, 331)
-
-[node name="Marker2D7" type="Marker2D" parent="Player/Spawner" unique_id=1235033035]
-position = Vector2(593, -353)
-
-[node name="Marker2D8" type="Marker2D" parent="Player/Spawner" unique_id=1060438340]
-position = Vector2(620, 349)
-
-[connection signal="timeout" from="Player/Spawner/Timer" to="Player/Spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
