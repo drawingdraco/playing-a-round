@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bvq7jn2vforef"]
+
+[ext_resource type="Script" uid="uid://capym2e8m586v" path="res://scripts/Army man.gd" id="1_3lvmj"]
+[ext_resource type="Texture2D" uid="uid://cff6kintfa47t" path="res://sprites/sand.png" id="2_3lvmj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_287tu"]
+size = Vector2(32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afpow"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3lvmj")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afpow"]
+size = Vector2(47, 47.5)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=763583890]
+script = ExtResource("1_3lvmj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1864373969]
+shape = SubResource("RectangleShape2D_287tu")
+one_way_collision_margin = 0.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2078278233]
+position = Vector2(9.536743e-07, -9.536743e-07)
+scale = Vector2(1.4375001, 1.5)
+sprite_frames = SubResource("SpriteFrames_afpow")
+animation = &"new_animation"
+
+[node name="enemyarea" type="Area2D" parent="." unique_id=1052273231]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemyarea" unique_id=1453458192]
+shape = SubResource("RectangleShape2D_afpow")
+
+[node name="Timer" type="Timer" parent="." unique_id=149919464]
+wait_time = 2.9899999999999998
+autostart = true
+
+[connection signal="area_entered" from="enemyarea" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

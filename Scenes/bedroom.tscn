@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cbn1f73gmxkud"]
 
 [ext_resource type="PackedScene" uid="uid://8tuaytomgar" path="res://Scenes/player.tscn" id="2_gru6s"]
+[ext_resource type="PackedScene" uid="uid://bvq7jn2vforef" path="res://Scenes/Army men.tscn" id="3_7bxbb"]
 [ext_resource type="Script" uid="uid://ds8nukh4nh5c" path="res://scripts/spawner.gd" id="3_gru6s"]
 
 [node name="Bedroom" type="Node" unique_id=580997709]
@@ -41,5 +42,8 @@ position = Vector2(620, 349)
 position = Vector2(-571, -318)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=165789266]
+
+[node name="Enemy" parent="." unique_id=763583890 instance=ExtResource("3_7bxbb")]
+position = Vector2(400, -239)
 
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]

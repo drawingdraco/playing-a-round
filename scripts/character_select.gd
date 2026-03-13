@@ -13,11 +13,15 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	Global.choschar = 1
+	Global.weapinv.append("Fist")
 	get_tree().change_scene_to_file("res://Scenes/wave_control.tscn")
 
 func _on_button_2_pressed() -> void:
 	Global.choschar = 2
+	Global.weapinv.append("Wand")
 	get_tree().change_scene_to_file("res://Scenes/wave_control.tscn")
 
 func _on_button_3_pressed() -> void:
-	pass # Replace with function body.
+	Global.choschar = 3
+	Global.weapinv.append("Mic")
+	get_tree().change_scene_to_file("res://Scenes/wave_control.tscn")

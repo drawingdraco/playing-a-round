@@ -29,8 +29,10 @@ func updatesprite():
 				break
 func _on_button_pressed() -> void:
 	amount+=1
-	
-	Global.enemy1 = amount
+	if name == "Armymen":
+		Global.enemy2 = amount
+	if name == "BrickMen":
+		Global.enemy1 = amount
 	print(str(amount))
 	var start = len(str(amount))-1
 	var end = len(str(amount))
@@ -40,7 +42,10 @@ func _on_button_2_pressed() -> void:
 	
 	if amount > 0:
 		amount-=1
-		Global.enemy1 = amount
+		if name == "Armymen":
+			Global.enemy2 = amount
+		if name == "BrickMen":
+			Global.enemy1 = amount
 		updatesprite()
 	
 	else:
@@ -50,7 +55,10 @@ func _on_button_2_pressed() -> void:
 func _on_button_3_pressed() -> void:
 	amount+=10
 	
-	Global.enemy1 = amount
+	if name == "Armymen":
+		Global.enemy2 = amount
+	if name == "BrickMen":
+		Global.enemy1 = amount
 	print(str(amount))
 	var start = len(str(amount))-1
 	var end = len(str(amount))
@@ -60,7 +68,10 @@ func _on_button_3_pressed() -> void:
 func _on_button_4_pressed() -> void:
 	if amount > 9:
 		amount-=10
-		Global.enemy1 = amount
+		if name == "Armymen":
+			Global.enemy2 = amount
+		if name == "BrickMen":
+			Global.enemy1 = amount
 		updatesprite()
 	
 	else:
@@ -70,7 +81,10 @@ func _on_button_4_pressed() -> void:
 func _on_button_5_pressed() -> void:
 	amount+=100
 	
-	Global.enemy1 = amount
+	if name == "Armymen":
+		Global.enemy2 = amount
+	if name == "BrickMen":
+		Global.enemy1 = amount
 	print(str(amount))
 	var start = len(str(amount))-1
 	var end = len(str(amount))
@@ -80,7 +94,10 @@ func _on_button_5_pressed() -> void:
 func _on_button_6_pressed() -> void:
 	if amount > 99:
 		amount-=100
-		Global.enemy1 = amount
+		if name == "Armymen":
+			Global.enemy2 = amount
+		if name == "BrickMen":
+			Global.enemy1 = amount
 		updatesprite()
 	
 	else:
