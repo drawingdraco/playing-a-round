@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bhujwh205lh3k"]
+
+[ext_resource type="Script" uid="uid://bbcd0ko8areix" path="res://scripts/ui.gd" id="1_dewlx"]
+[ext_resource type="Texture2D" uid="uid://hib0fwfqbjpg" path="res://sprites/health_ui_bg.png" id="1_nxvpl"]
+[ext_resource type="Texture2D" uid="uid://no8tt67qv1wy" path="res://sprites/health_meter_cyanvar.png" id="2_dewlx"]
+
+[node name="Control" type="Control" unique_id=1825462511]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dewlx")
+
+[node name="Panel" type="Panel" parent="." unique_id=35812868]
+layout_mode = 0
+offset_right = 316.0
+offset_bottom = 31.0
+
+[node name="HealthUiBg" type="Sprite2D" parent="Panel" unique_id=240142622]
+position = Vector2(159.49998, 15.999999)
+scale = Vector2(0.5491228, 0.49999997)
+texture = ExtResource("1_nxvpl")
+
+[node name="Health1" type="Sprite2D" parent="Panel/HealthUiBg" unique_id=212158528]
+position = Vector2(-74.0625, -1.914896)
+scale = Vector2(0.9375, 1.2765957)
+texture = ExtResource("2_dewlx")
+
+[node name="Health2" type="Sprite2D" parent="Panel/HealthUiBg" unique_id=909278553]
+position = Vector2(3.75, -1.914896)
+scale = Vector2(0.9375, 1.2765957)
+texture = ExtResource("2_dewlx")
+
+[node name="Health3" type="Sprite2D" parent="Panel/HealthUiBg" unique_id=286516156]
+position = Vector2(80.625, -1.914896)
+scale = Vector2(0.9375, 1.2765957)
+texture = ExtResource("2_dewlx")
+
+[node name="Health4" type="Sprite2D" parent="Panel/HealthUiBg" unique_id=1107956647]
+position = Vector2(158.4375, -1.914896)
+scale = Vector2(0.9375, 1.2765957)
+texture = ExtResource("2_dewlx")
+
+[node name="Health5" type="Sprite2D" parent="Panel/HealthUiBg" unique_id=1739322177]
+position = Vector2(236.25, -0.63829994)
+scale = Vector2(0.9375, 1.2765957)
+texture = ExtResource("2_dewlx")
