@@ -1,6 +1,7 @@
 extends Control
 
-
+func _ready() -> void:
+	Global.charhp = 3
 
 
 func _on_button_pressed() -> void:

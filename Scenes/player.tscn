@@ -4,11 +4,9 @@
 [ext_resource type="Script" uid="uid://paucjor1o2dg" path="res://scripts/player topdown.gd" id="1_fkybt"]
 [ext_resource type="Texture2D" uid="uid://boe4k76fugbpp" path="res://sprites/Sprite-0002.png" id="2_b60pb"]
 [ext_resource type="Texture2D" uid="uid://ca03m80gupe5s" path="res://sprites/HeroPlaceholder.png" id="2_x3wgy"]
-[ext_resource type="Script" uid="uid://d4ddmsf8qh7kt" path="res://scripts/collision_shape_2d_2.gd" id="4_10p0q"]
 [ext_resource type="Texture2D" uid="uid://d5ewiww3w5c1" path="res://sprites/WitchPlaceholder.png" id="5_3smsa"]
-[ext_resource type="Texture2D" uid="uid://bdeg6farkny8o" path="res://icon.svg" id="5_sweqy"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_t3sd2"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_x3wgy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -43,35 +41,34 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ockli"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkybt"]
 size = Vector2(32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5fhm"]
-size = Vector2(21, 32)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3wgy"]
+size = Vector2(32, 31)
 
-[node name="Player" type="Area2D" unique_id=1651111682 groups=["Player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1406212370]
+collision_layer = 2
+collision_mask = 9
 script = ExtResource("1_fkybt")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1382175064]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=202204286]
 position = Vector2(4.7683716e-07, 1.4305115e-06)
 scale = Vector2(0.5, 0.50000006)
-sprite_frames = SubResource("SpriteFrames_t3sd2")
-animation = &"witch stand"
+sprite_frames = SubResource("SpriteFrames_x3wgy")
+animation = &"Hero stand"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1689808667 groups=["Player"]]
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_ockli")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=758611204]
-position = Vector2(24, 0)
-shape = SubResource("RectangleShape2D_x5fhm")
-script = ExtResource("4_10p0q")
-
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D2" unique_id=1549686991]
-scale = Vector2(0.0722657, 0.1875)
-texture = ExtResource("5_sweqy")
-
-[node name="Timer" type="Timer" parent="." unique_id=1120412997]
+[node name="Timer" type="Timer" parent="." unique_id=1901459529]
 autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1192521266]
+shape = SubResource("RectangleShape2D_fkybt")
+one_way_collision_margin = 0.0
+
+[node name="playerarea" type="Area2D" parent="." unique_id=1212230619]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerarea" unique_id=1342662723]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_x3wgy")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

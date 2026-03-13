@@ -1,6 +1,8 @@
-extends Area2D
+extends CharacterBody2D
 
 @export var speed = 400 # How fast the player will move (pixels/sec).
+enum Dir { Right, Left, Down, Up }
+var direction = Dir.Down
 var screen_size # Size of the game window.
 var projectsc = preload("res://Scenes/projectile.tscn")
 @onready var main = get_node("/root/Bedroom")
@@ -13,25 +15,23 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var velocity = Vector2.ZERO # The player's movement vector.
-	if Input.is_action_pressed("move_right"):
+	velocity = Vector2() # The player's movement vector.
+	if Input.is_action_pressed('move_right'):
 		velocity.x += 1
-	if Input.is_action_pressed("move_left"):
+		direction = Dir.Right
+	if Input.is_action_pressed('move_left'):
 		velocity.x -= 1
-	if Input.is_action_pressed("move_down"):
+		direction = Dir.Left
+	if Input.is_action_pressed('move_down'):
 		velocity.y += 1
-	if Input.is_action_pressed("move_up"):
+		direction = Dir.Down
+	if Input.is_action_pressed('move_up'):
 		velocity.y -= 1
-	
-		
-		
-		
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
-		#$AnimatedSprite2D.play()
-	#else:
-		#$AnimatedSprite2D.stop()
-	position += velocity * delta
+		direction = Dir.Up
+
+	velocity = velocity.normalized() * speed
+	move_and_slide()
+
 	
 	if velocity.x != 0:
 		$AnimatedSprite2D.animation = "walk"
