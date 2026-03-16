@@ -4,7 +4,7 @@ extends CharacterBody2D
 enum Dir { Right, Left, Down, Up }
 var direction = Dir.Down
 var screen_size # Size of the game window.
-var projectsc = preload("res://Scenes/projectile.tscn")
+
 @onready var main = get_node("/root/Bedroom")
 @onready var cam = get_node("/root/Bedroom/Player/Camera2D")
 var lvupsc = preload("res://Scenes/level_up.tscn")
@@ -64,6 +64,8 @@ func start(pos):
 
 
 func _on_timer_timeout() -> void:
-	var projectile = projectsc.instantiate()
-	projectile.position = global_position
-	main.add_child(projectile)
+	for weapon in Global.weapinv:
+		var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
+		var projectile = projectsc.instantiate()
+		projectile.position = global_position
+		main.add_child(projectile)

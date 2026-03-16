@@ -7,7 +7,7 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gru6s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jx6fm"]
-size = Vector2(2365, 927)
+size = Vector2(4043, 927)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmi0g"]
 size = Vector2(929.5, 1719)
@@ -22,47 +22,30 @@ physics_material_override = SubResource("PhysicsMaterial_gru6s")
 position = Vector2(150, 1391)
 shape = SubResource("RectangleShape2D_jx6fm")
 
+[node name="Ylowmark" type="Marker2D" parent="StaticBody2D/CollisionShape2D" unique_id=788154653]
+position = Vector2(-66, -463)
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1189033709]
-position = Vector2(175, -1058)
+position = Vector2(3.5, -1058)
 shape = SubResource("RectangleShape2D_jx6fm")
+one_way_collision_margin = 0.1
+
+[node name="Yhighmark" type="Marker2D" parent="StaticBody2D/CollisionShape2D2" unique_id=1756948889]
+position = Vector2(-54, 463)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=358978457]
 position = Vector2(-1426.25, 182.5)
 shape = SubResource("RectangleShape2D_kmi0g")
 
+[node name="XLmark" type="Marker2D" parent="StaticBody2D/CollisionShape2D3" unique_id=1295520809]
+position = Vector2(464.25, -175.5)
+
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=128050977]
 position = Vector2(1555, 175)
 shape = SubResource("RectangleShape2D_kmi0g")
 
-[node name="Spawner" type="Node2D" parent="." unique_id=2041397369]
-script = ExtResource("3_gru6s")
-
-[node name="Marker2D" type="Marker2D" parent="Spawner" unique_id=898833723]
-position = Vector2(-604, 0)
-
-[node name="Marker2D2" type="Marker2D" parent="Spawner" unique_id=1940103458]
-position = Vector2(1, 342)
-
-[node name="Marker2D3" type="Marker2D" parent="Spawner" unique_id=1826664365]
-position = Vector2(627, -2)
-
-[node name="Marker2D4" type="Marker2D" parent="Spawner" unique_id=1583601442]
-position = Vector2(-7, -350)
-
-[node name="Timer" type="Timer" parent="Spawner" unique_id=1869131935]
-autostart = true
-
-[node name="Marker2D6" type="Marker2D" parent="Spawner" unique_id=198683868]
-position = Vector2(-593, -342)
-
-[node name="Marker2D5" type="Marker2D" parent="Spawner" unique_id=865579014]
-position = Vector2(-593, 331)
-
-[node name="Marker2D7" type="Marker2D" parent="Spawner" unique_id=1235033035]
-position = Vector2(593, -353)
-
-[node name="Marker2D8" type="Marker2D" parent="Spawner" unique_id=1060438340]
-position = Vector2(620, 349)
+[node name="XRmark" type="Marker2D" parent="StaticBody2D/CollisionShape2D4" unique_id=588298059]
+position = Vector2(-464, -167)
 
 [node name="Player" parent="." unique_id=181147812 instance=ExtResource("2_gru6s")]
 
@@ -77,4 +60,34 @@ offset_top = -324.0
 offset_right = -578.0
 offset_bottom = -324.0
 
-[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
+[node name="Spawner" type="Node2D" parent="Player" unique_id=2041397369]
+script = ExtResource("3_gru6s")
+
+[node name="Marker2D" type="Marker2D" parent="Player/Spawner" unique_id=898833723]
+position = Vector2(-604, 0)
+
+[node name="Marker2D2" type="Marker2D" parent="Player/Spawner" unique_id=1940103458]
+position = Vector2(1, 342)
+
+[node name="Marker2D3" type="Marker2D" parent="Player/Spawner" unique_id=1826664365]
+position = Vector2(627, -2)
+
+[node name="Marker2D4" type="Marker2D" parent="Player/Spawner" unique_id=1583601442]
+position = Vector2(-7, -350)
+
+[node name="Timer" type="Timer" parent="Player/Spawner" unique_id=1869131935]
+autostart = true
+
+[node name="Marker2D6" type="Marker2D" parent="Player/Spawner" unique_id=198683868]
+position = Vector2(-593, -342)
+
+[node name="Marker2D5" type="Marker2D" parent="Player/Spawner" unique_id=865579014]
+position = Vector2(-593, 331)
+
+[node name="Marker2D7" type="Marker2D" parent="Player/Spawner" unique_id=1235033035]
+position = Vector2(593, -353)
+
+[node name="Marker2D8" type="Marker2D" parent="Player/Spawner" unique_id=1060438340]
+position = Vector2(620, 349)
+
+[connection signal="timeout" from="Player/Spawner/Timer" to="Player/Spawner" method="_on_timer_timeout"]

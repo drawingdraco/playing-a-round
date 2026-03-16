@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cybk2pcu6ic5e"]
+[gd_scene format=3 uid="uid://v68uxntdxcoh"]
 
-[ext_resource type="Script" uid="uid://cijyk8yvhdd3p" path="res://scripts/projectile.gd" id="1_yr2qt"]
-[ext_resource type="Texture2D" uid="uid://bobj461qrdl5k" path="res://sprites/grass.png" id="2_yr2qt"]
+[ext_resource type="Script" uid="uid://gkn2gsnsijqx" path="res://Shop/Weapons/Fist.gd" id="1_5ejaf"]
+[ext_resource type="Texture2D" uid="uid://bobj461qrdl5k" path="res://sprites/grass.png" id="2_kpkyi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e1077"]
 animations = [{
@@ -12,7 +12,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_yr2qt")
+"texture": ExtResource("2_kpkyi")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -25,7 +25,7 @@ size = Vector2(12, 12)
 [node name="projectile" type="CharacterBody2D" unique_id=1717478552]
 collision_layer = 15
 collision_mask = 15
-script = ExtResource("1_yr2qt")
+script = ExtResource("1_5ejaf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1740347206]
 position = Vector2(-1.19209e-06, -1.19209e-06)
@@ -39,6 +39,7 @@ animation = &"new_animation"
 shape = SubResource("RectangleShape2D_cgh1o")
 
 [node name="Timer" type="Timer" parent="." unique_id=1575993647]
+wait_time = 0.25
 autostart = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
