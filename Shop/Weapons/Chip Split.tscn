@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://8h5b24hv8p5n"]
+
+[ext_resource type="Script" uid="uid://bi7ovmw2bk2gb" path="res://Shop/Weapons/Chip Split.gd" id="1_3weiu"]
+[ext_resource type="Texture2D" uid="uid://u3b2qoilxvm5" path="res://sprites/health_meter_purplevar.png" id="2_44iaa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e1077"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_44iaa")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgh1o"]
+size = Vector2(31, 12)
+
+[node name="projectile" type="CharacterBody2D" unique_id=1717478552]
+collision_layer = 15
+collision_mask = 15
+script = ExtResource("1_3weiu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1740347206]
+position = Vector2(-1.19209e-06, -1.19209e-06)
+scale = Vector2(0.375, 0.375)
+sprite_frames = SubResource("SpriteFrames_e1077")
+animation = &"new_animation"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=654518051]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1174469854]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_cgh1o")
+
+[node name="Timer" type="Timer" parent="." unique_id=1575993647]
+wait_time = 3.0
+autostart = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

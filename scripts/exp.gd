@@ -12,6 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	if "player" in area.name:
+	if "Pickup" in area.name:
 		Global.pexp += 1
 		queue_free()

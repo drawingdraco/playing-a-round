@@ -7,14 +7,24 @@ var screen_size # Size of the game window.
 
 @onready var main = get_node("/root/Bedroom")
 @onready var cam = get_node("/root/Bedroom/Player/Camera2D")
+@onready var player = get_node("/root/Bedroom/Player")
 var lvupsc = preload("res://Scenes/level_up.tscn")
 
+
+var micadd = false
 func _ready():
 	screen_size = get_viewport_rect().size
 	$AnimatedSprite2D.animation = Global.charlist[Global.choschar]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if "Mic" in Global.weapinv and micadd == false:
+		var micsc = load("res://Shop/Weapons/Mic.tscn")
+		var mic = micsc.instantiate()
+		player.add_child(mic)
+		micadd = true
+	
+	
 	velocity = Vector2() # The player's movement vector.
 	if Input.is_action_pressed('move_right'):
 		velocity.x += 1
@@ -65,7 +75,8 @@ func start(pos):
 
 func _on_timer_timeout() -> void:
 	for weapon in Global.weapinv:
-		var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
-		var projectile = projectsc.instantiate()
-		projectile.position = global_position
-		main.add_child(projectile)
+		if weapon != "Mic":
+			var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
+			var projectile = projectsc.instantiate()
+			projectile.position = global_position
+			main.add_child(projectile)

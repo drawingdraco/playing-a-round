@@ -1,7 +1,7 @@
 extends Node
 
 var choschar = 0
-var charlist = ["walk","Hero stand","witch stand"]
+var charlist = ["walk","Hero stand","witch stand","Pop stand"]
 var charhp = 3
 var enemy1 = 0
 var enemy2 = 0

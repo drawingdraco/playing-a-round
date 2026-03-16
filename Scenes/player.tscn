@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://paucjor1o2dg" path="res://scripts/player topdown.gd" id="1_fkybt"]
 [ext_resource type="Texture2D" uid="uid://boe4k76fugbpp" path="res://sprites/Sprite-0002.png" id="2_b60pb"]
 [ext_resource type="Texture2D" uid="uid://ca03m80gupe5s" path="res://sprites/HeroPlaceholder.png" id="2_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://bdeg6farkny8o" path="res://icon.svg" id="3_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://d5ewiww3w5c1" path="res://sprites/WitchPlaceholder.png" id="5_3smsa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x3wgy"]
@@ -14,6 +15,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"Hero stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_x3wgy")
+}],
+"loop": true,
+"name": &"Pop stand",
 "speed": 5.0
 }, {
 "frames": [{
@@ -47,6 +56,9 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3wgy"]
 size = Vector2(32, 31)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fkybt"]
+radius = 69.00725
+
 [node name="Player" type="CharacterBody2D" unique_id=1406212370]
 collision_layer = 2
 collision_mask = 9
@@ -56,7 +68,7 @@ script = ExtResource("1_fkybt")
 position = Vector2(4.7683716e-07, 1.4305115e-06)
 scale = Vector2(0.5, 0.50000006)
 sprite_frames = SubResource("SpriteFrames_x3wgy")
-animation = &"Hero stand"
+animation = &"Pop stand"
 
 [node name="Timer" type="Timer" parent="." unique_id=1901459529]
 autostart = true
@@ -70,5 +82,10 @@ one_way_collision_margin = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerarea" unique_id=1342662723]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_x3wgy")
+
+[node name="Pickup" type="Area2D" parent="." unique_id=874757158]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup" unique_id=804063951]
+shape = SubResource("CircleShape2D_fkybt")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

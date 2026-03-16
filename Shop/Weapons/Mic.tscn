@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c4sw2fk6ku0rf"]
+
+[ext_resource type="Script" uid="uid://rme4p07d7ev1" path="res://Shop/Weapons/mic.gd" id="1_xxs2s"]
+[ext_resource type="Texture2D" uid="uid://c7rubqcwc14o7" path="res://sprites/0Num.png" id="2_sjn16"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nndtk"]
+radius = 57.00877
+
+[node name="Area2D" type="Area2D" unique_id=494540019]
+collision_layer = 15
+collision_mask = 15
+script = ExtResource("1_xxs2s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=867662957]
+shape = SubResource("CircleShape2D_nndtk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1840665354]
+position = Vector2(3.499997, 2.4999971)
+scale = Vector2(15.099998, 10.900001)
+texture = ExtResource("2_sjn16")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
