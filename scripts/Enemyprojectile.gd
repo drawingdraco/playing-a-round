@@ -29,7 +29,7 @@ func _on_timer_timeout() -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print(area.name)
-	if "Player" in area.name:
+	if "player" in area.name:
 		print("area entered")
 		Global.charhp = Global.charhp - 1
 		print(Global.charhp)

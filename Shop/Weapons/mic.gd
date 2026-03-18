@@ -25,14 +25,19 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		print(Global.charhp)
 
 
-func _on_body_entered(body: Node2D) -> void:
-	print(body.name)
-	if "Enemy" in body.name or "CharacterBody2D" in body.name:
-		print("area entered")
-		var exp = expsc.instantiate()
-		exp.position = body.position
-		main.add_child(exp)
-		body.queue_free()
+#func _on_body_entered(body: Node2D) :
+#	if "Enemy" in body.name or "CharacterBody2D" in body.name:
+#		print("area entered")
+#		var exp = expsc.instantiate()
+#		exp.position = body.position
+#		main.add_child(exp)
+#		body.queue_free()
 		
 		
-		print(Global.charhp)
+#		print(Global.charhp)
+
+func _on_timer_timeout():
+	var bodies = get_overlapping_bodies()
+	for body in bodies:
+		if "Player" not in body.name:
+			body.damage(5)

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed : int = 500
+var speed : int = 700
 var direction : Vector2
 var shot = false
 @onready var main = get_node("/root/Bedroom")
@@ -26,14 +26,9 @@ func _on_timer_timeout() -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	print(area.name)
 	if "enemy" in area.name or "CharacterBody2D" in area.name:
 		pierce -= 1
-		print("area entered")
-		var exp = expsc.instantiate()
-		exp.position = area.get_parent().position
-		main.add_child(exp)
-		area.get_parent().queue_free()
+		area.get_parent().damage(10)
 		if pierce == 0:
 			for i in get_children():
 				if i is not Area2D:
@@ -41,5 +36,3 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			queue_free()
 		
 		
-		
-		print(Global.charhp)

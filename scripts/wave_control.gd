@@ -12,4 +12,5 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	Global.enmtot = Global.enemy1 + Global.enemy2
 	get_tree().change_scene_to_file("res://Scenes/bedroom.tscn")

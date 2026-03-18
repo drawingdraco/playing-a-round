@@ -27,11 +27,4 @@ func _on_timer_timeout() -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print(area.name)
 	if "enemy" in area.name or "CharacterBody2D" in area.name:
-		print("area entered")
-		var exp = expsc.instantiate()
-		exp.position = area.get_parent().position
-		main.add_child(exp)
-		area.get_parent().queue_free()
-		
-		
-		print(Global.charhp)
+		area.get_parent().damage(randi_range(1,6))

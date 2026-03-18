@@ -14,17 +14,20 @@ func _process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	Global.choschar = 1
 	Global.weapinv.append("Fist")
-	Global.charhp =5
+	Global.charhp = 5
+	Global.charspeed = 300
 	get_tree().change_scene_to_file("res://Scenes/wave_control.tscn")
 
 func _on_button_2_pressed() -> void:
 	Global.choschar = 2
 	Global.weapinv.append("Wand")
 	Global.charhp = 3
+	Global.charspeed = 450
 	get_tree().change_scene_to_file("res://Scenes/wave_control.tscn")
 
 func _on_button_3_pressed() -> void:
 	Global.choschar = 3
 	Global.weapinv.append("Mic")
 	Global.charhp = 4
+	Global.charspeed = 400
 	get_tree().change_scene_to_file("res://Scenes/wave_control.tscn")

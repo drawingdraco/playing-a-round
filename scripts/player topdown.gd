@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 400 # How fast the player will move (pixels/sec).
+@export var speed = Global.charspeed # How fast the player will move (pixels/sec).
 enum Dir { Right, Left, Down, Up }
 var direction = Dir.Down
 var screen_size # Size of the game window.
@@ -73,8 +73,37 @@ func start(pos):
 	$CollisionShape2D.disabled = false
 
 
-func _on_timer_timeout() -> void:
-	for weapon in Global.weapinv:
+func _on_weapon_1_timeout() -> void:
+	var weapon = Global.weapinv[0]
+	for child in get_children():
+		if child.name == "Weapon 1":
+			child.wait_time = Global.weap1sp 
+	if weapon != "Mic":
+		var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
+		var projectile = projectsc.instantiate()
+		projectile.position = global_position
+		main.add_child(projectile)
+
+
+func _on_weapon_2_timeout() -> void:
+	if len(Global.weapinv) >= 2:
+		var weapon = Global.weapinv[1]
+		for child in get_children():
+			if child.name == "Weapon 2":
+				child.wait_time = Global.weap2sp 
+		if weapon != "Mic":
+			var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
+			var projectile = projectsc.instantiate()
+			projectile.position = global_position
+			main.add_child(projectile)
+
+
+func _on_weapon_3_timeout() -> void:
+	if len(Global.weapinv) >= 3:
+		var weapon = Global.weapinv[2]
+		for child in get_children():
+			if child.name == "Weapon 3":
+				child.wait_time = Global.weap3sp 
 		if weapon != "Mic":
 			var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
 			var projectile = projectsc.instantiate()

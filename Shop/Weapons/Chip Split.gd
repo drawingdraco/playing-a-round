@@ -19,27 +19,6 @@ func _physics_process(delta):
 
 
 
-func _on_area_2d_body_entered(body: Node2D):
-	print(body.name)
-	if "Enemy" in body.name or "CharacterBody2D" in body.name:
-		print("area entered")
-		
-		
-		
-		var exp = expsc.instantiate()
-		exp.position = body.position
-		main.add_child(exp)
-		body.queue_free()
-		for i in get_children():
-			
-			
-			if i is not Area2D:
-				i.queue_free()
-		queue_free()
-		
-		
-		
-		print(Global.charhp)
 
 
 func _on_timer_timeout() -> void:
@@ -50,14 +29,9 @@ func _on_timer_timeout() -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	print(area.name)
 	if "enemy" in area.name or "CharacterBody2D" in area.name:
+		area.get_parent().damage(5)
 		pierce -= 1
-		print("area entered")
-		var exp = expsc.instantiate()
-		exp.position = area.get_parent().position
-		main.add_child(exp)
-		area.get_parent().queue_free()
 		if pierce == 0:
 			for i in get_children():
 				if i is not Area2D:
@@ -65,5 +39,3 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			queue_free()
 		
 		
-		
-		print(Global.charhp)

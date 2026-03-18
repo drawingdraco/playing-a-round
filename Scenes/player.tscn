@@ -70,7 +70,13 @@ scale = Vector2(0.5, 0.50000006)
 sprite_frames = SubResource("SpriteFrames_x3wgy")
 animation = &"Pop stand"
 
-[node name="Timer" type="Timer" parent="." unique_id=1901459529]
+[node name="Weapon 1" type="Timer" parent="." unique_id=1901459529]
+autostart = true
+
+[node name="Weapon 2" type="Timer" parent="." unique_id=1794109293]
+autostart = true
+
+[node name="Weapon 3" type="Timer" parent="." unique_id=784748510]
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1192521266]
@@ -88,4 +94,6 @@ shape = SubResource("RectangleShape2D_x3wgy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup" unique_id=804063951]
 shape = SubResource("CircleShape2D_fkybt")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Weapon 1" to="." method="_on_weapon_1_timeout"]
+[connection signal="timeout" from="Weapon 2" to="." method="_on_weapon_2_timeout"]
+[connection signal="timeout" from="Weapon 3" to="." method="_on_weapon_3_timeout"]

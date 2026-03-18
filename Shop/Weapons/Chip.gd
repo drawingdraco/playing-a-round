@@ -6,6 +6,16 @@ var shot = false
 @onready var main = get_node("/root/Bedroom")
 var expsc = preload("res://Scenes/exp.tscn")
 
+
+var Attacksp = 1.5
+func _ready() -> void:
+	if Global.weapinv[0] == "Chip":
+		Global.weap1sp = Attacksp
+	elif Global.weapinv[1] == "Chip":
+		Global.weap2sp = Attacksp
+	elif Global.weapinv[2] == "Chip":
+		Global.weap3sp = Attacksp
+
 var pierce = 3
 func _physics_process(delta):
 	if (not shot):
@@ -31,7 +41,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	print(area.name)
 	if "enemy" in area.name or "CharacterBody2D" in area.name:
 		pierce -= 1
-		print("area entered")
+		
+		area.get_parent().damage(10)
 		
 		for num in range(0,2):
 			var projectsc = load("res://Shop/Weapons/Chip Split.tscn")
@@ -40,17 +51,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			main.add_child(projectile)
 		
 		
-		
-		var exp = expsc.instantiate()
-		exp.position = area.get_parent().position
-		main.add_child(exp)
-		area.get_parent().queue_free()
 		if pierce == 0:
 			for i in get_children():
 				if i is not Area2D:
 					i.queue_free()
 			queue_free()
-		
-		
-		
-		print(Global.charhp)

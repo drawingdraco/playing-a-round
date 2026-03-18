@@ -37,7 +37,7 @@ animation = &"new_animation"
 shape = SubResource("RectangleShape2D_cgh1o")
 
 [node name="Timer" type="Timer" parent="." unique_id=1575993647]
-wait_time = 7.0
+wait_time = 3.0
 autostart = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
