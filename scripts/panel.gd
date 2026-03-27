@@ -29,10 +29,14 @@ func updatesprite():
 				break
 func _on_button_pressed() -> void:
 	amount+=1
-	if name == "Armymen":
+	if "Armymen" in  name:
 		Global.enemy2 = amount
-	if name == "BrickMen":
+	if "BrickMen" in  name:
 		Global.enemy1 = amount
+	if "drawings" in  name:
+		Global.enemy3 = amount
+	if "Stiffed animals" in  name:
+		Global.enemy4 = amount
 	print(str(amount))
 	var start = len(str(amount))-1
 	var end = len(str(amount))
@@ -42,10 +46,14 @@ func _on_button_2_pressed() -> void:
 	
 	if amount > 0:
 		amount-=1
-		if name == "Armymen":
+		if "Armymen" in  name:
 			Global.enemy2 = amount
-		if name == "BrickMen":
+		if "BrickMen" in  name:
 			Global.enemy1 = amount
+		if "drawings" in  name:
+			Global.enemy3 = amount
+		if "Stuffed animals" in  name:
+			Global.enemy4 = amount
 		updatesprite()
 	
 	else:
@@ -55,10 +63,14 @@ func _on_button_2_pressed() -> void:
 func _on_button_3_pressed() -> void:
 	amount+=10
 	
-	if name == "Armymen":
+	if "Armymen" in  name:
 		Global.enemy2 = amount
-	if name == "BrickMen":
+	if "BrickMen" in  name:
 		Global.enemy1 = amount
+	if "drawings" in  name:
+		Global.enemy3 = amount
+	if "Stuffed animals" in  name:
+		Global.enemy4 = amount
 	print(str(amount))
 	var start = len(str(amount))-1
 	var end = len(str(amount))
@@ -68,10 +80,14 @@ func _on_button_3_pressed() -> void:
 func _on_button_4_pressed() -> void:
 	if amount > 9:
 		amount-=10
-		if name == "Armymen":
+		if "Armymen" in  name:
 			Global.enemy2 = amount
-		if name == "BrickMen":
+		if "BrickMen" in  name:
 			Global.enemy1 = amount
+		if "drawings" in  name:
+			Global.enemy3 = amount
+		if "Stuffed animals" in  name:
+			Global.enemy4 = amount
 		updatesprite()
 	
 	else:
@@ -81,11 +97,14 @@ func _on_button_4_pressed() -> void:
 func _on_button_5_pressed() -> void:
 	amount+=100
 	
-	if name == "Armymen":
+	if "Armymen" in  name:
 		Global.enemy2 = amount
-	if name == "BrickMen":
+	if "BrickMen" in  name:
 		Global.enemy1 = amount
-	print(str(amount))
+	if "drawings" in  name:
+		Global.enemy3 = amount
+	if "Stuffed animals" in  name:
+		Global.enemy4 = amount
 	var start = len(str(amount))-1
 	var end = len(str(amount))
 	updatesprite()
@@ -94,10 +113,14 @@ func _on_button_5_pressed() -> void:
 func _on_button_6_pressed() -> void:
 	if amount > 99:
 		amount-=100
-		if name == "Armymen":
+		if "Armymen" in  name:
 			Global.enemy2 = amount
-		if name == "BrickMen":
+		if "BrickMen" in  name:
 			Global.enemy1 = amount
+		if "drawings" in  name:
+			Global.enemy3 = amount
+		if "Stuffed animals" in  name:
+			Global.enemy4 = amount
 		updatesprite()
 	
 	else:

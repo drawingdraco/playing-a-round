@@ -6,6 +6,9 @@ var charlistwalk = ["walk","Hero walk","witch walk","Pop walk"]
 var charhp = 3
 var enemy1 = 0
 var enemy2 = 0
+var enemy3 = 0
+var enemy4 = 0
+
 var pexp = 0
 var to_next_level = 10
 var enmtot =0
