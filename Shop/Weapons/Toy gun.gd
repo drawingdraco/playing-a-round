@@ -6,6 +6,17 @@ var shot = false
 @onready var main = get_node("/root/Bedroom")
 var expsc = preload("res://Scenes/exp.tscn")
 
+
+var Attacksp = 1.5
+func _ready() -> void:
+	if Global.weapinv[0] == "Toy gun":
+		Global.weap1sp = Attacksp
+	elif Global.weapinv[1] == "Toy gun":
+		Global.weap2sp = Attacksp
+	elif Global.weapinv[2] == "Toy gun":
+		Global.weap3sp = Attacksp
+
+
 var pierce = 1
 func _physics_process(delta):
 	if (not shot):

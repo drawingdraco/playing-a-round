@@ -35,3 +35,7 @@ func _on_timer_timeout() -> void:
 		armymen.position = spawn.global_position
 		main.add_child(armymen)
 		Global.enemy2 -= 1
+		
+	if Global.enmdef == Global.enmtot:
+		Global.wave += 1
+		get_tree().change_scene_to_file("res://Scenes/wave_control.tscn")

@@ -20,6 +20,7 @@ func damage(value):
 		var exp = expsc.instantiate()
 		exp.position = position
 		main.add_child(exp)
+		Global.enmdef += 1
 		queue_free()
 
 

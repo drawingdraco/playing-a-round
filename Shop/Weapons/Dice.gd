@@ -5,6 +5,16 @@ var direction : Vector2
 var shot = false
 @onready var main = get_node("/root/Bedroom")
 var expsc = preload("res://Scenes/exp.tscn")
+
+var Attacksp = 1.5
+func _ready() -> void:
+	if Global.weapinv[0] == "Dice":
+		Global.weap1sp = Attacksp
+	elif Global.weapinv[1] == "Dice":
+		Global.weap2sp = Attacksp
+	elif Global.weapinv[2] == "Dice":
+		Global.weap3sp = Attacksp
+
 func _physics_process(delta):
 	if (not shot):
 		direction = (get_global_mouse_position() - position)

@@ -165,6 +165,14 @@ offset_top = 60.0
 offset_right = 25.0
 offset_bottom = 81.0
 
+[node name="Lock" type="Panel" parent="." unique_id=992147147]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_top = 362.0
+offset_right = 358.0
+offset_bottom = 479.0
+
 [connection signal="pressed" from="BrickMen/Button" to="BrickMen" method="_on_button_pressed"]
 [connection signal="pressed" from="BrickMen/Button2" to="BrickMen" method="_on_button_2_pressed"]
 [connection signal="pressed" from="BrickMen/Button3" to="BrickMen" method="_on_button_3_pressed"]

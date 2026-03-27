@@ -3,6 +3,26 @@
 [ext_resource type="Script" uid="uid://bbcd0ko8areix" path="res://scripts/ui.gd" id="1_dewlx"]
 [ext_resource type="Texture2D" uid="uid://hib0fwfqbjpg" path="res://sprites/health_ui_bg.png" id="1_nxvpl"]
 [ext_resource type="Texture2D" uid="uid://no8tt67qv1wy" path="res://sprites/health_meter_cyanvar.png" id="2_dewlx"]
+[ext_resource type="Texture2D" uid="uid://cugg3uod15eax" path="res://sprites/EXPempty.png" id="4_qwshj"]
+[ext_resource type="Script" uid="uid://nfhrgapjf0fa" path="res://Scenes/texture_progress_bar.gd" id="5_48q88"]
+
+[sub_resource type="Curve" id="Curve_xjg7p"]
+_limits = [0.0, 1.0, 0.05, 1.0]
+_data = [Vector2(0.05, 1), 0.0, 0.0, 0, 0, Vector2(0.61623764, 0.8895864), -1.6161995, -1.6161995, 0, 0, Vector2(0.6181188, 0.9279911), -2.463896, -2.463896, 0, 0, Vector2(0.9774257, 0.044682384), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_mg6lk"]
+_data = [Vector2(0.26732674, 0.6879616), 0.0, 0.0, 0, 0, Vector2(0.76435643, 0.16949779), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_wunin"]
+_data = [Vector2(0.3148515, 0.05428362), 0.0, 0.0, 0, 0, Vector2(0.8079208, 0.764771), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_j04uc"]
+curve_x = SubResource("Curve_xjg7p")
+curve_y = SubResource("Curve_mg6lk")
+curve_z = SubResource("Curve_wunin")
 
 [node name="Control" type="Control" unique_id=1825462511]
 layout_mode = 3
@@ -47,3 +67,14 @@ texture = ExtResource("2_dewlx")
 position = Vector2(236.25, -0.63829994)
 scale = Vector2(0.9375, 1.2765957)
 texture = ExtResource("2_dewlx")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=849744015]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 32.0
+offset_right = 304.0
+offset_bottom = 62.0
+nine_patch_stretch = true
+texture_under = ExtResource("4_qwshj")
+texture_progress = SubResource("CurveXYZTexture_j04uc")
+script = ExtResource("5_48q88")

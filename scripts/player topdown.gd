@@ -8,6 +8,7 @@ var screen_size # Size of the game window.
 @onready var main = get_node("/root/Bedroom")
 @onready var cam = get_node("/root/Bedroom/Player/Camera2D")
 @onready var player = get_node("/root/Bedroom/Player")
+@onready var _animated_sprite = $AnimatedSprite2D
 var lvupsc = preload("res://Scenes/level_up.tscn")
 
 
@@ -40,18 +41,19 @@ func _process(delta):
 		direction = Dir.Up
 
 	velocity = velocity.normalized() * speed
-	move_and_slide()
-
-	
 	if velocity.x != 0:
-		$AnimatedSprite2D.animation = "walk"
+		_animated_sprite.play(Global.charlistwalk[Global.choschar])
 		#$AnimatedSprite2D.flip_v = false
-		#$AnimatedSprite2D.flip_h = velocity.x < 0
+		$AnimatedSprite2D.flip_h = velocity.x < 0
 	elif velocity.y != 0:
-		$AnimatedSprite2D.animation = "walk"
+		_animated_sprite.play(Global.charlistwalk[Global.choschar])
 		#$AnimatedSprite2D.flip_v = velocity.y > 0
 	else:
 		$AnimatedSprite2D.animation = Global.charlist[Global.choschar]
+	move_and_slide()
+
+	
+	
 	
 	if (Global.charhp <= 0):
 		print("ded")
@@ -62,7 +64,7 @@ func _process(delta):
 		var lvup = lvupsc.instantiate()
 		lvup.position = get_child(0).position
 		cam.add_child(lvup)
-		Global.to_next_level = Global.to_next_level * 1.5
+		Global.to_next_level = int(Global.to_next_level * 1.5)
 
 
 
