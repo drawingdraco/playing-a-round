@@ -8,6 +8,7 @@ var enemy1 = 0
 var enemy2 = 0
 var enemy3 = 0
 var enemy4 = 0
+var boss = 0
 
 var pexp = 0
 var to_next_level = 10

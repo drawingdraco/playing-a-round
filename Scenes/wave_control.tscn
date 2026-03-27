@@ -419,6 +419,339 @@ offset_top = 60.0
 offset_right = 25.0
 offset_bottom = 81.0
 
+[node name="BrickMen3" type="Panel" parent="." unique_id=817399649]
+layout_mode = 0
+offset_left = 841.0
+offset_top = 403.0
+offset_right = 921.0
+offset_bottom = 488.0
+script = ExtResource("2_trxva")
+
+[node name="Button" type="Button" parent="BrickMen3" unique_id=1188691682]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+
+[node name="Button2" type="Button" parent="BrickMen3" unique_id=151797429]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 60.0
+offset_right = 76.0
+offset_bottom = 81.0
+
+[node name="Sprite2D" type="Sprite2D" parent="BrickMen3" unique_id=1357766012]
+position = Vector2(64, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BrickMen3" unique_id=2082431159]
+position = Vector2(40.26, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D3" type="Sprite2D" parent="BrickMen3" unique_id=1542581759]
+position = Vector2(14, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Button3" type="Button" parent="BrickMen3" unique_id=1040973854]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 7.0
+offset_right = 51.0
+offset_bottom = 28.0
+
+[node name="Button4" type="Button" parent="BrickMen3" unique_id=668971111]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 60.0
+offset_right = 51.0
+offset_bottom = 81.0
+
+[node name="Button5" type="Button" parent="BrickMen3" unique_id=104959940]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 25.0
+offset_bottom = 28.0
+
+[node name="Button6" type="Button" parent="BrickMen3" unique_id=1345921957]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 25.0
+offset_bottom = 81.0
+
+[node name="Armymen3" type="Panel" parent="." unique_id=2095091563]
+layout_mode = 0
+offset_left = 954.0
+offset_top = 404.0
+offset_right = 1034.0
+offset_bottom = 489.0
+script = ExtResource("2_trxva")
+
+[node name="Button" type="Button" parent="Armymen3" unique_id=615730146]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+
+[node name="Button2" type="Button" parent="Armymen3" unique_id=317939983]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 60.0
+offset_right = 76.0
+offset_bottom = 81.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Armymen3" unique_id=600533368]
+position = Vector2(64, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Armymen3" unique_id=241579980]
+position = Vector2(40.26, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Armymen3" unique_id=261513320]
+position = Vector2(14, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Button3" type="Button" parent="Armymen3" unique_id=1500548596]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 7.0
+offset_right = 51.0
+offset_bottom = 28.0
+
+[node name="Button4" type="Button" parent="Armymen3" unique_id=2002694227]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 60.0
+offset_right = 51.0
+offset_bottom = 81.0
+
+[node name="Button5" type="Button" parent="Armymen3" unique_id=664324076]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 25.0
+offset_bottom = 28.0
+
+[node name="Button6" type="Button" parent="Armymen3" unique_id=1125028812]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 25.0
+offset_bottom = 81.0
+
+[node name="drawings2" type="Panel" parent="." unique_id=1482543372]
+layout_mode = 0
+offset_left = 842.0
+offset_top = 279.0
+offset_right = 922.0
+offset_bottom = 364.0
+script = ExtResource("2_trxva")
+
+[node name="Button" type="Button" parent="drawings2" unique_id=1657563568]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+
+[node name="Button2" type="Button" parent="drawings2" unique_id=1914458126]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 60.0
+offset_right = 76.0
+offset_bottom = 81.0
+
+[node name="Sprite2D" type="Sprite2D" parent="drawings2" unique_id=340111540]
+position = Vector2(64, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D2" type="Sprite2D" parent="drawings2" unique_id=347612162]
+position = Vector2(40.26, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D3" type="Sprite2D" parent="drawings2" unique_id=152509387]
+position = Vector2(14, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Button3" type="Button" parent="drawings2" unique_id=1969158201]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 7.0
+offset_right = 51.0
+offset_bottom = 28.0
+
+[node name="Button4" type="Button" parent="drawings2" unique_id=1402978260]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 60.0
+offset_right = 51.0
+offset_bottom = 81.0
+
+[node name="Button5" type="Button" parent="drawings2" unique_id=1754263685]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 25.0
+offset_bottom = 28.0
+
+[node name="Button6" type="Button" parent="drawings2" unique_id=1259379326]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 25.0
+offset_bottom = 81.0
+
+[node name="Stuffed animals2" type="Panel" parent="." unique_id=839156363]
+layout_mode = 0
+offset_left = 955.0
+offset_top = 280.0
+offset_right = 1035.0
+offset_bottom = 365.0
+script = ExtResource("2_trxva")
+
+[node name="Button" type="Button" parent="Stuffed animals2" unique_id=2012581584]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+
+[node name="Button2" type="Button" parent="Stuffed animals2" unique_id=913966219]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 60.0
+offset_right = 76.0
+offset_bottom = 81.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Stuffed animals2" unique_id=173562400]
+position = Vector2(64, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stuffed animals2" unique_id=185851594]
+position = Vector2(40.26, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Stuffed animals2" unique_id=566716933]
+position = Vector2(14, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Button3" type="Button" parent="Stuffed animals2" unique_id=1030684951]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 7.0
+offset_right = 51.0
+offset_bottom = 28.0
+
+[node name="Button4" type="Button" parent="Stuffed animals2" unique_id=896356563]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 60.0
+offset_right = 51.0
+offset_bottom = 81.0
+
+[node name="Button5" type="Button" parent="Stuffed animals2" unique_id=1635585625]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 25.0
+offset_bottom = 28.0
+
+[node name="Button6" type="Button" parent="Stuffed animals2" unique_id=438828366]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 25.0
+offset_bottom = 81.0
+
+[node name="Robot" type="Panel" parent="." unique_id=165161296]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 177.0
+offset_right = 980.0
+offset_bottom = 262.0
+script = ExtResource("2_trxva")
+
+[node name="Button" type="Button" parent="Robot" unique_id=2142068357]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 28.0
+
+[node name="Button2" type="Button" parent="Robot" unique_id=423344438]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 60.0
+offset_right = 76.0
+offset_bottom = 81.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Robot" unique_id=260656553]
+position = Vector2(64, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Robot" unique_id=2013152899]
+position = Vector2(40.26, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Robot" unique_id=606332750]
+position = Vector2(14, 44)
+scale = Vector2(1.6999986, 1.900001)
+texture = ExtResource("3_v0lov")
+
+[node name="Button3" type="Button" parent="Robot" unique_id=1782284343]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 7.0
+offset_right = 51.0
+offset_bottom = 28.0
+
+[node name="Button4" type="Button" parent="Robot" unique_id=282474279]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 60.0
+offset_right = 51.0
+offset_bottom = 81.0
+
+[node name="Button5" type="Button" parent="Robot" unique_id=2060238027]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 25.0
+offset_bottom = 28.0
+
+[node name="Button6" type="Button" parent="Robot" unique_id=89714]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 25.0
+offset_bottom = 81.0
+
+[node name="Lock3" type="Panel" parent="." unique_id=1190117666]
+visible = false
+layout_mode = 0
+offset_left = 821.0
+offset_top = 157.0
+offset_right = 1051.0
+offset_bottom = 491.0
+
 [node name="Lock2" type="Panel" parent="." unique_id=715905475]
 visible = false
 layout_mode = 0
@@ -464,3 +797,33 @@ offset_bottom = 472.0
 [connection signal="pressed" from="Stuffed animals/Button4" to="Stuffed animals" method="_on_button_4_pressed"]
 [connection signal="pressed" from="Stuffed animals/Button5" to="Stuffed animals" method="_on_button_5_pressed"]
 [connection signal="pressed" from="Stuffed animals/Button6" to="Stuffed animals" method="_on_button_6_pressed"]
+[connection signal="pressed" from="BrickMen3/Button" to="BrickMen3" method="_on_button_pressed"]
+[connection signal="pressed" from="BrickMen3/Button2" to="BrickMen3" method="_on_button_2_pressed"]
+[connection signal="pressed" from="BrickMen3/Button3" to="BrickMen3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="BrickMen3/Button4" to="BrickMen3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="BrickMen3/Button5" to="BrickMen3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="BrickMen3/Button6" to="BrickMen3" method="_on_button_6_pressed"]
+[connection signal="pressed" from="Armymen3/Button" to="Armymen3" method="_on_button_pressed"]
+[connection signal="pressed" from="Armymen3/Button2" to="Armymen3" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Armymen3/Button3" to="Armymen3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Armymen3/Button4" to="Armymen3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Armymen3/Button5" to="Armymen3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Armymen3/Button6" to="Armymen3" method="_on_button_6_pressed"]
+[connection signal="pressed" from="drawings2/Button" to="drawings2" method="_on_button_pressed"]
+[connection signal="pressed" from="drawings2/Button2" to="drawings2" method="_on_button_2_pressed"]
+[connection signal="pressed" from="drawings2/Button3" to="drawings2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="drawings2/Button4" to="drawings2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="drawings2/Button5" to="drawings2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="drawings2/Button6" to="drawings2" method="_on_button_6_pressed"]
+[connection signal="pressed" from="Stuffed animals2/Button" to="Stuffed animals2" method="_on_button_pressed"]
+[connection signal="pressed" from="Stuffed animals2/Button2" to="Stuffed animals2" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Stuffed animals2/Button3" to="Stuffed animals2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Stuffed animals2/Button4" to="Stuffed animals2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Stuffed animals2/Button5" to="Stuffed animals2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Stuffed animals2/Button6" to="Stuffed animals2" method="_on_button_6_pressed"]
+[connection signal="pressed" from="Robot/Button" to="Robot" method="_on_button_pressed"]
+[connection signal="pressed" from="Robot/Button2" to="Robot" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Robot/Button3" to="Robot" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Robot/Button4" to="Robot" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Robot/Button5" to="Robot" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Robot/Button6" to="Robot" method="_on_button_6_pressed"]

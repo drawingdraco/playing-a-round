@@ -37,6 +37,8 @@ func _on_button_pressed() -> void:
 		Global.enemy3 = amount
 	if "Stiffed animals" in  name:
 		Global.enemy4 = amount
+	if "Robot" in name:
+		Global.boss = amount
 	print(str(amount))
 	var start = len(str(amount))-1
 	var end = len(str(amount))
@@ -54,6 +56,8 @@ func _on_button_2_pressed() -> void:
 			Global.enemy3 = amount
 		if "Stuffed animals" in  name:
 			Global.enemy4 = amount
+		if "Robot" in name:
+			Global.boss = amount
 		updatesprite()
 	
 	else:
@@ -71,6 +75,8 @@ func _on_button_3_pressed() -> void:
 		Global.enemy3 = amount
 	if "Stuffed animals" in  name:
 		Global.enemy4 = amount
+	if "Robot" in name:
+		Global.boss = amount
 	print(str(amount))
 	var start = len(str(amount))-1
 	var end = len(str(amount))
@@ -88,6 +94,8 @@ func _on_button_4_pressed() -> void:
 			Global.enemy3 = amount
 		if "Stuffed animals" in  name:
 			Global.enemy4 = amount
+		if "Robot" in name:
+			Global.boss = amount
 		updatesprite()
 	
 	else:
@@ -105,6 +113,8 @@ func _on_button_5_pressed() -> void:
 		Global.enemy3 = amount
 	if "Stuffed animals" in  name:
 		Global.enemy4 = amount
+	if "Robot" in name:
+		Global.boss = amount
 	var start = len(str(amount))-1
 	var end = len(str(amount))
 	updatesprite()
@@ -121,6 +131,8 @@ func _on_button_6_pressed() -> void:
 			Global.enemy3 = amount
 		if "Stuffed animals" in  name:
 			Global.enemy4 = amount
+		if "Robot" in name:
+			Global.boss = amount
 		updatesprite()
 	
 	else:

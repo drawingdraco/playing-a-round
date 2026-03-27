@@ -11,7 +11,7 @@ var enemysc = preload("res://Scenes/enemy.tscn")
 var Armysc = preload("res://Scenes/Army men.tscn")
 var drawsc = preload("res://Scenes/Drawings.tscn")
 var animsc = preload("res://Scenes/Stuffed animal.tscn")
-
+var bosssc = preload("res://Scenes/Robot.tscn")
 
 var spawnpoints = []
 # Called when the node enters the scene tree for the first time.
@@ -66,6 +66,11 @@ func _on_timer_timeout() -> void:
 				break
 			else:
 				enmspaw = 1
+	if Global.boss > 0:
+		var boss = bosssc.instantiate()
+		boss.position = spawn.global_position
+		main.add_child(boss)
+		Global.boss -= 1
 		
 	if Global.enmdef == Global.enmtot:
 		Global.wave += 1
