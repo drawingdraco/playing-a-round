@@ -27,7 +27,10 @@ func damage(value):
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.name == ("Player"):
 		print("player entered")
-		Global.charhp -= 1
+		if Global.shield == false:
+			Global.charhp -= 1
+		else:
+			Global.shield = false
 		print(Global.charhp)
 		
 func _on_timer_timeout() -> void:

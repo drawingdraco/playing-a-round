@@ -4,7 +4,7 @@ var speed : int = 500
 var direction : Vector2
 var shot = false
 @onready var main = get_node("/root/Bedroom")
-
+var explosc = preload("res://Scenes/Explosion.tscn")
 var Attacksp = 1.0
 
 func _ready() -> void:
@@ -39,3 +39,7 @@ func _on_timer_timeout() -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if "enemy" in area.name or "CharacterBody2D" in area.name:
 		area.get_parent().damage(10)
+		if randi_range(1,3) == 3 and Global.fireworks == true:
+			var explosion = explosc.instantiate()
+			explosion.position = global_position
+			main.add_child(explosion)

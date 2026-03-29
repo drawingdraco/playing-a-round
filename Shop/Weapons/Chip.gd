@@ -5,7 +5,7 @@ var direction : Vector2
 var shot = false
 @onready var main = get_node("/root/Bedroom")
 var expsc = preload("res://Scenes/exp.tscn")
-
+var explosc = preload("res://Scenes/Explosion.tscn")
 
 var Attacksp = 1.5
 func _ready() -> void:
@@ -43,6 +43,12 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		pierce -= 1
 		
 		area.get_parent().damage(10)
+		
+		if randi_range(1,3) == 3 and Global.fireworks == true:
+			var explosion = explosc.instantiate()
+			explosion.position = global_position
+			main.add_child(explosion)
+		
 		
 		for num in range(0,2):
 			var projectsc = load("res://Shop/Weapons/Chip Split.tscn")

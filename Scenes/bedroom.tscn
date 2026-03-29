@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://brcwgcn5siraj" path="res://sprites/House-bedroom-Sheet.png" id="4_5fxfa"]
 [ext_resource type="Texture2D" uid="uid://bve11fbi2d1xm" path="res://sprites/House-living room-Sheet.png" id="5_jx6fm"]
 [ext_resource type="Texture2D" uid="uid://bosjca6xpsyja" path="res://sprites/House-tileset-Sheet.png" id="6_kmi0g"]
+[ext_resource type="Script" uid="uid://dv3d2cnbd8td5" path="res://scripts/item_controler.gd" id="7_jx6fm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5fxfa"]
 texture = ExtResource("4_5fxfa")
@@ -189,5 +190,8 @@ position = Vector2(620, 349)
 
 [node name="Timer" type="Timer" parent="Player/Spawner" unique_id=1869131935]
 autostart = true
+
+[node name="Item controler" type="Node2D" parent="Player" unique_id=1330558879]
+script = ExtResource("7_jx6fm")
 
 [connection signal="timeout" from="Player/Spawner/Timer" to="Player/Spawner" method="_on_timer_timeout"]

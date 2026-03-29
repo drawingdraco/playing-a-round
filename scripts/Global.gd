@@ -32,10 +32,13 @@ var screw = false
 var fireworks = false
 var glue = false
 var pickuprange = 50
+var shield = false
+var glasses = 2
+var target = false
+var attackspeed = false
 
 
-
-
+var shieldcnt = 0
 
 
 

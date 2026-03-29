@@ -13,5 +13,6 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if "Pickup" in area.name:
-		Global.pexp += 1
+		Global.pexp += randi_range(1,5) * Global.glasses
+		
 		queue_free()

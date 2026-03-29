@@ -24,9 +24,9 @@ func _ready() -> void:
 
 func _on_timer_timeout() -> void:
 	var spawn = spawnpoints[randi() % spawnpoints.size()]
-	#if spawn.global_position.x > xmax.global_position.x or  spawn.global_position.x < xmin.global_position.x or spawn.global_position.y > ymax.global_position.y or  spawn.global_position.y < ymin.global_position.y:
-		#while spawn.global_position.x > xmax.global_position.x or  spawn.global_position.x < xmin.global_position.x or spawn.global_position.y > ymax.global_position.y or  spawn.global_position.y < ymin.global_position.y:
-			#spawn = spawnpoints[randi() % spawnpoints.size()]
+	for num in range(1,9):
+		if spawn.global_position.x > xmax.global_position.x or  spawn.global_position.x < xmin.global_position.x or spawn.global_position.y > ymax.global_position.y or  spawn.global_position.y < ymin.global_position.y:
+			spawn = spawnpoints[randi() % spawnpoints.size()]
 	var enmspaw = randi_range(1,4)
 	for num in range(1,8):
 		print(enmspaw)

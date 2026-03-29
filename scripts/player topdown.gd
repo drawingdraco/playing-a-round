@@ -79,7 +79,7 @@ func _on_weapon_1_timeout() -> void:
 	var weapon = Global.weapinv[0]
 	for child in get_children():
 		if child.name == "Weapon 1":
-			child.wait_time = Global.weap1sp 
+			child.wait_time = Global.weap1sp * Global.attackspeed
 	if weapon != "Mic":
 		var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
 		var projectile = projectsc.instantiate()
@@ -92,7 +92,7 @@ func _on_weapon_2_timeout() -> void:
 		var weapon = Global.weapinv[1]
 		for child in get_children():
 			if child.name == "Weapon 2":
-				child.wait_time = Global.weap2sp 
+				child.wait_time = Global.weap2sp * Global.attackspeed
 		if weapon != "Mic":
 			var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
 			var projectile = projectsc.instantiate()
@@ -105,7 +105,7 @@ func _on_weapon_3_timeout() -> void:
 		var weapon = Global.weapinv[2]
 		for child in get_children():
 			if child.name == "Weapon 3":
-				child.wait_time = Global.weap3sp 
+				child.wait_time = Global.weap3sp * Global.attackspeed 
 		if weapon != "Mic":
 			var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
 			var projectile = projectsc.instantiate()

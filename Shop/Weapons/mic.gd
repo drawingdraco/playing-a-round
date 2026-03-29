@@ -1,7 +1,7 @@
 extends Area2D
 @onready var main = get_node("/root/Bedroom")
 var expsc = preload("res://Scenes/exp.tscn")
-
+var explosc = preload("res://Scenes/Explosion.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -40,4 +40,8 @@ func _on_timer_timeout():
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if "Player" not in body.name and "Static" not in body.name:
+			if randi_range(1,3) == 3 and Global.fireworks == true:
+				var explosion = explosc.instantiate()
+				explosion.position = global_position
+				main.add_child(explosion)
 			body.damage(5)
