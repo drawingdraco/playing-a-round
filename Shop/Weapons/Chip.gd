@@ -6,7 +6,7 @@ var shot = false
 @onready var main = get_node("/root/Bedroom")
 var expsc = preload("res://Scenes/exp.tscn")
 var explosc = preload("res://Scenes/Explosion.tscn")
-
+var damage = 10 + Global.damage
 var Attacksp = 1.5
 func _ready() -> void:
 	if Global.weapinv[0] == "Chip":
@@ -15,6 +15,12 @@ func _ready() -> void:
 		Global.weap2sp = Attacksp
 	elif Global.weapinv[2] == "Chip":
 		Global.weap3sp = Attacksp
+	if Global.weapinv[0] == "Chip":
+		damage *= Global.weap1lv
+	elif Global.weapinv[1] == "Chip":
+		damage *= Global.weap2lv
+	elif Global.weapinv[2] == "Chip":
+		damage *= Global.weap3lv
 
 var pierce = 3
 func _physics_process(delta):
@@ -42,7 +48,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if "enemy" in area.name or "CharacterBody2D" in area.name:
 		pierce -= 1
 		
-		area.get_parent().damage(10)
+		area.get_parent().damage(damage)
 		
 		if randi_range(1,3) == 3 and Global.fireworks == true:
 			var explosion = explosc.instantiate()

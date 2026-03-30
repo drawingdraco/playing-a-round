@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c4sw2fk6ku0rf"]
 
 [ext_resource type="Script" uid="uid://rme4p07d7ev1" path="res://Shop/Weapons/mic.gd" id="1_xxs2s"]
-[ext_resource type="Texture2D" uid="uid://c7rubqcwc14o7" path="res://sprites/0Num.png" id="2_sjn16"]
+[ext_resource type="Texture2D" uid="uid://cip3eu35trvc0" path="res://sprites/MIC AURA.png" id="2_sjn16"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nndtk"]
 radius = 79.05694
@@ -15,8 +15,8 @@ script = ExtResource("1_xxs2s")
 shape = SubResource("CircleShape2D_nndtk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1840665354]
-position = Vector2(3.499997, 2.4999971)
-scale = Vector2(15.099998, 10.900001)
+position = Vector2(2, -1.9999995)
+scale = Vector2(0.55666673, 0.55371094)
 texture = ExtResource("2_sjn16")
 
 [node name="Timer" type="Timer" parent="." unique_id=1645218722]

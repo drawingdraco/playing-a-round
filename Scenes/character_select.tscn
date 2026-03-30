@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dxfnmvnvoio6q"]
 
 [ext_resource type="Script" uid="uid://dopv0ouigm1vm" path="res://scripts/character_select.gd" id="1_uelh3"]
+[ext_resource type="Texture2D" uid="uid://cvkyp11y7sg67" path="res://sprites/evil devlish charecter sheet thingy hero1.png" id="2_4yuuj"]
+[ext_resource type="Texture2D" uid="uid://cau0wegvbxis4" path="res://sprites/evil devlish charecter sheet thingy wittch1.png" id="3_2b87j"]
+[ext_resource type="Texture2D" uid="uid://cmomo843qsvvl" path="res://sprites/evil devlish charecter sheet thingy1.png" id="4_krxhl"]
 
 [node name="Character select" type="Control" unique_id=395915391]
 layout_mode = 3
@@ -11,30 +14,81 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uelh3")
 
-[node name="Button" type="Button" parent="." unique_id=1487756194]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1121562192]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 143.0
-offset_right = 203.0
-offset_bottom = 377.0
+offset_right = 1153.0
+offset_bottom = 642.0
+color = Color(0, 0, 0, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=946009059]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+anchor_bottom = 0.18
+offset_left = 80.0
+offset_top = 113.0
+offset_right = 204.256
+offset_bottom = 403.36
+
+[node name="Button" type="Button" parent="Panel" unique_id=1487756194]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 257.0
+offset_right = 188.0
+offset_bottom = 368.0
 text = "Hero"
 
-[node name="Button2" type="Button" parent="." unique_id=1357380658]
+[node name="Sprite2D" type="Sprite2D" parent="Panel" unique_id=103458047]
+position = Vector2(107, 158)
+scale = Vector2(0.71, 0.71)
+texture = ExtResource("2_4yuuj")
+
+[node name="Panel2" type="Panel" parent="." unique_id=2129323136]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+anchor_bottom = 0.18
+offset_left = 456.0
+offset_top = 117.0
+offset_right = 580.256
+offset_bottom = 407.36
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel2" unique_id=269089612]
+position = Vector2(115, 164)
+scale = Vector2(0.71, 0.71)
+texture = ExtResource("3_2b87j")
+
+[node name="Button2" type="Button" parent="Panel2" unique_id=1357380658]
 layout_mode = 0
-offset_left = 346.0
-offset_top = 150.0
-offset_right = 485.0
-offset_bottom = 384.0
+offset_left = 51.0
+offset_top = 272.0
+offset_right = 190.0
+offset_bottom = 379.0
 text = "Witch"
 
-[node name="Button3" type="Button" parent="." unique_id=1529430764]
+[node name="Panel3" type="Panel" parent="." unique_id=1102315786]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+anchor_bottom = 0.18
+offset_left = 800.0
+offset_top = 111.0
+offset_right = 924.256
+offset_bottom = 401.36
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel3" unique_id=1337122665]
+position = Vector2(115, 164)
+scale = Vector2(0.71, 0.71)
+texture = ExtResource("4_krxhl")
+
+[node name="Button3" type="Button" parent="Panel3" unique_id=1529430764]
 layout_mode = 0
-offset_left = 603.0
-offset_top = 148.0
-offset_right = 742.0
-offset_bottom = 382.0
+offset_left = 48.0
+offset_top = 283.0
+offset_right = 187.0
+offset_bottom = 378.0
 text = "Pop star"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel3/Button3" to="." method="_on_button_3_pressed"]

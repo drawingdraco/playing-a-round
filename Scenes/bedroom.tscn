@@ -191,7 +191,12 @@ position = Vector2(620, 349)
 [node name="Timer" type="Timer" parent="Player/Spawner" unique_id=1869131935]
 autostart = true
 
+[node name="Timer2" type="Timer" parent="Player/Spawner" unique_id=1340155255]
+wait_time = 10.0
+one_shot = true
+
 [node name="Item controler" type="Node2D" parent="Player" unique_id=1330558879]
 script = ExtResource("7_jx6fm")
 
 [connection signal="timeout" from="Player/Spawner/Timer" to="Player/Spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Player/Spawner/Timer2" to="Player/Spawner" method="_on_timer_2_timeout"]

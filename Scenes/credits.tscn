@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b5wwpe3pfn2bg"]
+
+[node name="ColorRect" type="ColorRect" unique_id=1438637669]
+offset_right = 1155.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=984302038]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.24900001
+anchor_bottom = 0.097
+offset_left = 419.0
+offset_top = 17.0
+offset_right = 394.405
+offset_bottom = 55.852997
+theme_override_font_sizes/font_size = 53
+text = "Credits:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=720819578]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.018000001
+offset_left = 244.0
+offset_top = 135.0
+offset_right = 865.0
+offset_bottom = 540.282
+theme_override_font_sizes/font_size = 33
+text = "Developer - Drawingdraco
+sprites:
+breakthroughitall
+BVminecrafter2
+maschiaT
+Drawingdraco
+Music:
+Ziepan
+"
+horizontal_alignment = 1

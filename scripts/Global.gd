@@ -12,6 +12,7 @@ var boss = 0
 
 var pexp = 0
 var to_next_level = 10
+var prevlev = 0
 var enmtot =0
 var enmdef = 0
 
@@ -23,24 +24,30 @@ var iteminv = []
 var weap1sp = 1.0
 var weap2sp = 1.0
 var weap3sp = 1.0
-
+var weap1lv = 1
+var weap2lv = 1
+var weap3lv = 1
 
 var wave = 1
 
 #item chaging stats
 var screw = false
 var fireworks = false
-var glue = false
+var glue = 1.0
 var pickuprange = 50
 var shield = false
-var glasses = 2
+var glasses = 1
 var target = false
-var attackspeed = false
+var attackspeed = 1.0
 
 
 var shieldcnt = 0
 
+var damage = 0
 
+var dificulty = 0
+
+var invincible = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

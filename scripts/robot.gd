@@ -5,7 +5,8 @@ extends CharacterBody2D
 var speed : int = 80
 var direction : Vector2
 var expsc = preload("res://Scenes/exp.tscn")
-var health = 10000
+var health = 1000
+var glued = false
 
 func damage(value):
 	health -= value
@@ -14,13 +15,19 @@ func damage(value):
 		exp.position = position
 		main.add_child(exp)
 		Global.enmdef += 1
+		Global.boss -= 1
 		queue_free()
+	if "glue" in Global.iteminv:
+			if randi_range(1,3) == 3:
+				glued = true
 
 
 func _physics_process(delta):
 	direction = (player.position - position)
 	direction = direction.normalized()
 	velocity = direction * speed
+	if glued:
+		velocity *= Global.glue
 	move_and_slide()
 
 

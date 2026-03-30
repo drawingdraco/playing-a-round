@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b527s7kqatjp8"
+path="res://.godot/imported/health_meter_cyanvar.gamejam.aseprite-f5d02facc601ece94779964359d611a5.res"
+
+[deps]
+
+source_file="res://sprites/health_meter_cyanvar.gamejam.aseprite"
+dest_files=["res://.godot/imported/health_meter_cyanvar.gamejam.aseprite-f5d02facc601ece94779964359d611a5.res"]
+
+[params]
+

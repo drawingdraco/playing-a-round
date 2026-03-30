@@ -26,7 +26,7 @@ Global="*uid://b720jtrqcooxa"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg")
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg")
 
 [global_group]
 
@@ -84,3 +84,4 @@ change_camera={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/size/mode=2

@@ -7,11 +7,13 @@ extends Node2D
 @onready var ymin = get_node("/root/Bedroom/StaticBody2D/CollisionShape2D2/Yhighmark")
 @onready var xmin = get_node("/root/Bedroom/StaticBody2D/CollisionShape2D4/XRmark")
 
-var enemysc = preload("res://Scenes/enemy.tscn")
+var enemysc = preload("res://Scenes/Brickmen.tscn")
 var Armysc = preload("res://Scenes/Army men.tscn")
 var drawsc = preload("res://Scenes/Drawings.tscn")
 var animsc = preload("res://Scenes/Stuffed animal.tscn")
 var bosssc = preload("res://Scenes/Robot.tscn")
+
+var theendisnear = false
 
 var spawnpoints = []
 # Called when the node enters the scene tree for the first time.
@@ -70,8 +72,17 @@ func _on_timer_timeout() -> void:
 		var boss = bosssc.instantiate()
 		boss.position = spawn.global_position
 		main.add_child(boss)
-		Global.boss -= 1
 		
-	if Global.enmdef == Global.enmtot:
-		Global.wave += 1
-		get_tree().change_scene_to_file("res://Scenes/wave_control.tscn")
+		
+	if Global.enemy1 + Global.enemy2 + Global.enemy3 + Global.enemy4 + Global.boss == 0 and !theendisnear and Global.wave != 3:
+		$Timer2.start()
+		theendisnear = true
+	elif Global.boss == 0  and Global.wave == 3:
+		get_tree().change_scene_to_file("res://Scenes/credits.tscn")
+		
+
+
+func _on_timer_2_timeout() -> void:
+	Global.wave += 1
+	theendisnear = false
+	get_tree().change_scene_to_file("res://Scenes/wave_control.tscn")

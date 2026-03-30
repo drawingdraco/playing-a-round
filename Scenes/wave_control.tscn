@@ -760,6 +760,33 @@ offset_top = 216.0
 offset_right = 673.0
 offset_bottom = 472.0
 
+[node name="Label3" type="Label" parent="." unique_id=385334124]
+layout_mode = 0
+offset_left = 822.0
+offset_top = 17.0
+offset_right = 1030.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 52
+text = "Wave 3 :"
+
+[node name="Label2" type="Label" parent="." unique_id=603202297]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 15.0
+offset_right = 649.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 52
+text = "Wave 2 :"
+
+[node name="Label" type="Label" parent="." unique_id=543100598]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 7.0
+offset_right = 333.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 52
+text = "Wave 1 :"
+
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="BrickMen/Button" to="BrickMen" method="_on_button_pressed"]
 [connection signal="pressed" from="BrickMen/Button2" to="BrickMen" method="_on_button_2_pressed"]

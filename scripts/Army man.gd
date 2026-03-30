@@ -4,14 +4,18 @@ var projectsc = preload("res://Scenes/Enemy projectile.tscn")
 @onready var main = get_node("/root/Bedroom")
 @onready var player = get_node("/root/Bedroom/Player")
 var expsc = preload("res://Scenes/exp.tscn")
-var speed : int = 100
+var screwsc = preload("res://Scenes/Screw.tscn")
+var speed : int = 100 + (Global.dificulty * 10)
 var direction : Vector2
-var health = 20
+var health = 20 * (Global.dificulty + 1)
+var glued = false
 
 func _physics_process(delta):
 	direction = (player.position - position)
 	direction = direction.normalized()
-	velocity = direction * speed
+	velocity = direction * speed  
+	if glued:
+			velocity *= Global.glue
 	move_and_slide()
 
 func damage(value):
@@ -21,7 +25,17 @@ func damage(value):
 		exp.position = position
 		main.add_child(exp)
 		Global.enmdef += 1
+		if "Hampster ball" in Global.iteminv:
+			Global.shieldcnt += 1
+		if Global.screw and randi_range(1,30) == 30:
+			var screw = screwsc.instantiate()
+			screw.position = position
+			main.add_child(screw)
+		if "glue" in Global.iteminv:
+			if randi_range(1,3) == 3:
+				glued = true
 		queue_free()
+		
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

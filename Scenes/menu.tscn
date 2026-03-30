@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://b5iei24b3udwa"]
 
 [ext_resource type="Script" uid="uid://c1b5tuv6mua7p" path="res://scripts/menu.gd" id="1_pq6ve"]
+[ext_resource type="Texture2D" uid="uid://bxodtkk0t8bob" path="res://sprites/logo.png" id="2_xhh6f"]
+
+[sub_resource type="Gradient" id="Gradient_xhh6f"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cayip"]
+gradient = SubResource("Gradient_xhh6f")
+fill_from = Vector2(0.5, 0.7687747)
+fill_to = Vector2(0.527668, 0.11264822)
 
 [node name="menu" type="Control" unique_id=1844195944]
 layout_mode = 3
@@ -12,6 +20,12 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pq6ve")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=519792497]
+layout_mode = 0
+offset_right = 1136.0
+offset_bottom = 642.0
+texture = SubResource("GradientTexture2D_cayip")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=265161587]
 layout_mode = 0
@@ -30,6 +44,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1288279643]
+visible = false
 layout_mode = 2
 text = "Options"
 icon_alignment = 1
@@ -40,6 +55,11 @@ layout_mode = 2
 text = "Exit"
 icon_alignment = 1
 expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1727265771]
+position = Vector2(575, 173)
+scale = Vector2(0.19899999, 0.199)
+texture = ExtResource("2_xhh6f")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

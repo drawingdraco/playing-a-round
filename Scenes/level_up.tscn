@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://vwvw8er1m02v"]
 
 [ext_resource type="Script" uid="uid://bmcb750xkkwla" path="res://scripts/level_up.gd" id="1_cv3ws"]
+[ext_resource type="Texture2D" uid="uid://8dwkt1p06ebb" path="res://sprites/Dice.png" id="2_mrog8"]
 
 [node name="Level_up" type="Control" unique_id=1805805435]
 layout_mode = 3
@@ -25,6 +26,19 @@ offset_top = 77.0
 offset_right = 971.0
 offset_bottom = 155.0
 
+[node name="Label" type="Label" parent="Panel/Button" unique_id=1517081924]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 1.0
+offset_right = 430.0
+offset_bottom = 41.0
+text = "glue"
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Button" unique_id=625339449]
+position = Vector2(50, 42.000004)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("2_mrog8")
+
 [node name="Button2" type="Button" parent="Panel" unique_id=1672275447]
 layout_mode = 0
 offset_left = 272.0
@@ -32,12 +46,37 @@ offset_top = 223.0
 offset_right = 972.0
 offset_bottom = 301.0
 
+[node name="Label" type="Label" parent="Panel/Button2" unique_id=155512047]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.082
+anchor_bottom = 0.147
+offset_left = 91.0
+offset_right = 225.6
+offset_bottom = 25.534
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Button2" unique_id=1204874570]
+position = Vector2(50, 40)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("2_mrog8")
+
 [node name="Button3" type="Button" parent="Panel" unique_id=1622651674]
 layout_mode = 0
 offset_left = 270.0
 offset_top = 361.0
 offset_right = 970.0
 offset_bottom = 439.0
+
+[node name="Label" type="Label" parent="Panel/Button3" unique_id=1333267611]
+layout_mode = 0
+offset_left = 94.0
+offset_right = 308.0
+offset_bottom = 44.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Button3" unique_id=55030312]
+position = Vector2(50, 37.000004)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("2_mrog8")
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]

@@ -8,12 +8,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if "Screw driver" in Global.iteminv:
+	if "Screwdriver" in Global.iteminv:
 		Global.screw = true
 	if "Mini fireworks" in Global.iteminv:
 		Global.fireworks = true
 	if "glue" in Global.iteminv:
-		Global.glue = true
+		Global.glue = .5
 	if "magnet" in Global.iteminv:
 		Global.pickuprange = 200
 	if "Hampster ball" in Global.iteminv:
@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	if "target" in Global.iteminv:
 		Global.target = true
 	if "glasses" in Global.iteminv:
-		Global.glasses = true
+		Global.glasses = 1.5
 	if "grease" in Global.iteminv:
 		Global.attackspeed = .5
 	if Global.shieldcnt == 50:

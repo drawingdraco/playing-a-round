@@ -7,7 +7,7 @@ var shot = false
 var expsc = preload("res://Scenes/exp.tscn")
 var explosc = preload("res://Scenes/Explosion.tscn")
 
-
+var damage = randi_range(1,6) + Global.damage
 
 
 var Attacksp = 1.5
@@ -18,6 +18,12 @@ func _ready() -> void:
 		Global.weap2sp = Attacksp
 	elif Global.weapinv[2] == "Dice":
 		Global.weap3sp = Attacksp
+	if Global.weapinv[0] == "Dice":
+		damage *= Global.weap1lv
+	elif Global.weapinv[1] == "Dice":
+		damage *= Global.weap2lv
+	elif Global.weapinv[2] == "Dice":
+		damage *= Global.weap3lv
 
 func _physics_process(delta):
 	if (not shot):
@@ -41,7 +47,7 @@ func _on_timer_timeout() -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print(area.name)
 	if "enemy" in area.name or "CharacterBody2D" in area.name:
-		area.get_parent().damage(randi_range(1,6))
+		area.get_parent().damage(damage)
 		if randi_range(1,3) == 3 and Global.fireworks == true:
 			var explosion = explosc.instantiate()
 			explosion.position = global_position

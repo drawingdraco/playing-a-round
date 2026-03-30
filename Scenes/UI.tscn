@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://no8tt67qv1wy" path="res://sprites/health_meter_cyanvar.png" id="2_dewlx"]
 [ext_resource type="Texture2D" uid="uid://cugg3uod15eax" path="res://sprites/EXPempty.png" id="4_qwshj"]
 [ext_resource type="Script" uid="uid://nfhrgapjf0fa" path="res://Scenes/texture_progress_bar.gd" id="5_48q88"]
+[ext_resource type="Script" uid="uid://cduqiycu2ufka" path="res://scripts/timer.gd" id="6_48q88"]
 
 [sub_resource type="Curve" id="Curve_xjg7p"]
 _limits = [0.0, 1.0, 0.05, 1.0]
@@ -78,3 +79,19 @@ nine_patch_stretch = true
 texture_under = ExtResource("4_qwshj")
 texture_progress = SubResource("CurveXYZTexture_j04uc")
 script = ExtResource("5_48q88")
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=2062297138]
+layout_mode = 0
+offset_left = 468.0
+offset_top = -1.0
+offset_right = 604.0
+offset_bottom = 105.0
+theme_override_font_sizes/normal_font_size = 48
+text = "00:00"
+fit_content = true
+script = ExtResource("6_48q88")
+
+[node name="Timer" type="Timer" parent="Timer" unique_id=336742282]
+autostart = true
+
+[connection signal="timeout" from="Timer/Timer" to="Timer" method="_on_timer_timeout"]

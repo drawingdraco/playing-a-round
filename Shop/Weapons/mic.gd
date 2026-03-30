@@ -2,9 +2,11 @@ extends Area2D
 @onready var main = get_node("/root/Bedroom")
 var expsc = preload("res://Scenes/exp.tscn")
 var explosc = preload("res://Scenes/Explosion.tscn")
-# Called when the node enters the scene tree for the first time.
+
+var damage = 5 + Global.damage
+
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,6 +39,13 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 #		print(Global.charhp)
 
 func _on_timer_timeout():
+	var tempdam = damage
+	if Global.weapinv[0] == "Mic":
+		tempdam *= Global.weap1lv
+	elif Global.weapinv[1] == "Mic":
+		tempdam *= Global.weap2lv
+	elif Global.weapinv[2] == "Mic":
+		tempdam *= Global.weap3lv
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if "Player" not in body.name and "Static" not in body.name:
@@ -44,4 +53,4 @@ func _on_timer_timeout():
 				var explosion = explosc.instantiate()
 				explosion.position = global_position
 				main.add_child(explosion)
-			body.damage(5)
+			body.damage(tempdam)

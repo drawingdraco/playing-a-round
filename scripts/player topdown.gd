@@ -5,6 +5,8 @@ enum Dir { Right, Left, Down, Up }
 var direction = Dir.Down
 var screen_size # Size of the game window.
 
+var timerstart = false
+
 @onready var main = get_node("/root/Bedroom")
 @onready var cam = get_node("/root/Bedroom/Player/Camera2D")
 @onready var player = get_node("/root/Bedroom/Player")
@@ -19,6 +21,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Global.invincible and !timerstart:
+		$Invincibility.start()
+		timerstart = true
 	if "Mic" in Global.weapinv and micadd == false:
 		var micsc = load("res://Shop/Weapons/Mic.tscn")
 		var mic = micsc.instantiate()
@@ -64,7 +69,7 @@ func _process(delta):
 		var lvup = lvupsc.instantiate()
 		lvup.position = get_child(0).position
 		cam.add_child(lvup)
-		Global.to_next_level = int(Global.to_next_level * 1.5)
+		
 
 
 
@@ -111,3 +116,8 @@ func _on_weapon_3_timeout() -> void:
 			var projectile = projectsc.instantiate()
 			projectile.position = global_position
 			main.add_child(projectile)
+
+
+func _on_invincibility_timeout() -> void:
+	Global.invincible = false
+	timerstart=false
