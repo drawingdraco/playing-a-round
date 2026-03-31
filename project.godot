@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 Global="*uid://b720jtrqcooxa"
+Bgmusic="*uid://d0843abmmr5so"
 
 [editor_plugins]
 

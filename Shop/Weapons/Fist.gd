@@ -10,6 +10,7 @@ var damage = 10 + Global.damage
 
 
 func _ready() -> void:
+	
 	if Global.weapinv[0] == "Fist":
 		Global.weap1sp = Attacksp
 	elif Global.weapinv[1] == "Fist":

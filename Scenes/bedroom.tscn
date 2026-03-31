@@ -152,15 +152,6 @@ position = Vector2(-464, -167)
 [node name="Marker2D" type="Marker2D" parent="Player" unique_id=1143569547]
 position = Vector2(-571, -318)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=165789266]
-
-[node name="Control" parent="Player/Camera2D" unique_id=1825462511 instance=ExtResource("3_7bxbb")]
-offset_left = -578.0
-offset_top = -324.0
-offset_right = -578.0
-offset_bottom = -324.0
-metadata/_edit_use_anchors_ = true
-
 [node name="Spawner" type="Node2D" parent="Player" unique_id=2041397369]
 script = ExtResource("3_gru6s")
 
@@ -194,6 +185,15 @@ autostart = true
 [node name="Timer2" type="Timer" parent="Player/Spawner" unique_id=1340155255]
 wait_time = 10.0
 one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=165789266]
+
+[node name="Control" parent="Player/Camera2D" unique_id=1825462511 instance=ExtResource("3_7bxbb")]
+offset_left = -578.0
+offset_top = -324.0
+offset_right = -578.0
+offset_bottom = -324.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Item controler" type="Node2D" parent="Player" unique_id=1330558879]
 script = ExtResource("7_jx6fm")

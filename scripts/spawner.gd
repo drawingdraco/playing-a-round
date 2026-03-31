@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var main = get_node("/root/Bedroom")
+@onready var main = get_node("/root/Bedroom/StaticBody2D")
 
 @onready var ymax = get_node("/root/Bedroom/StaticBody2D/CollisionShape2D2/Yhighmark")
 @onready var xmax = get_node("/root/Bedroom/StaticBody2D/CollisionShape2D/Ylowmark")
@@ -36,7 +36,7 @@ func _on_timer_timeout() -> void:
 			if Global.enemy1 > 0:
 				var enemy = enemysc.instantiate()
 				enemy.position = spawn.global_position
-				main.add_child(enemy)
+				main.add_sibling(enemy)
 				Global.enemy1 -= 1
 				break
 			else:
@@ -45,7 +45,7 @@ func _on_timer_timeout() -> void:
 			if Global.enemy2 > 0:
 				var armymen = Armysc.instantiate()
 				armymen.position = spawn.global_position
-				main.add_child(armymen)
+				main.add_sibling(armymen)
 				Global.enemy2 -= 1
 				break
 			else:
@@ -54,7 +54,7 @@ func _on_timer_timeout() -> void:
 			if Global.enemy3 > 0:
 				var drawings = drawsc.instantiate()
 				drawings.position = spawn.global_position
-				main.add_child(drawings)
+				main.add_sibling(drawings)
 				Global.enemy3 -= 1
 				break
 			else:
@@ -63,7 +63,7 @@ func _on_timer_timeout() -> void:
 			if Global.enemy4 > 0:
 				var stuffanim = animsc.instantiate()
 				stuffanim.position = spawn.global_position
-				main.add_child(stuffanim)
+				main.add_sibling(stuffanim)
 				Global.enemy4 -= 1
 				break
 			else:
@@ -71,7 +71,7 @@ func _on_timer_timeout() -> void:
 	if Global.boss > 0:
 		var boss = bosssc.instantiate()
 		boss.position = spawn.global_position
-		main.add_child(boss)
+		main.add_sibling(boss)
 		
 		
 	if Global.enemy1 + Global.enemy2 + Global.enemy3 + Global.enemy4 + Global.boss == 0 and !theendisnear and Global.wave != 3:

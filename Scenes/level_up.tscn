@@ -12,6 +12,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cv3ws")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1299117048]
+layout_mode = 0
+offset_left = -493.0
+offset_top = -257.0
+offset_right = 518.0
+offset_bottom = 244.0
+color = Color(0.51892537, 0.15228587, 0.5395293, 1)
+
 [node name="Panel" type="Panel" parent="." unique_id=1709236409]
 layout_mode = 0
 offset_left = -495.0

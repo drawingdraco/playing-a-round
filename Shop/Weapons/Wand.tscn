@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ccbyguvhgevgs"]
 
 [ext_resource type="Script" uid="uid://2hkl2mje80no" path="res://Shop/Weapons/Wand.gd" id="1_ojwes"]
-[ext_resource type="Texture2D" uid="uid://u3b2qoilxvm5" path="res://sprites/health_meter_purplevar.png" id="2_ojwes"]
+[ext_resource type="Texture2D" uid="uid://dvtpfifn1f5jf" path="res://sprites/magic.png" id="2_ojwes"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e1077"]
 animations = [{
@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgh1o"]
-size = Vector2(31, 12)
+size = Vector2(24, 24)
 
 [node name="projectile" type="CharacterBody2D" unique_id=1717478552]
 collision_layer = 15
@@ -28,15 +28,14 @@ collision_mask = 15
 script = ExtResource("1_ojwes")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1740347206]
-position = Vector2(-1.19209e-06, -1.19209e-06)
-scale = Vector2(0.375, 0.375)
+position = Vector2(2.3841858e-07, 2.3841858e-07)
+scale = Vector2(0.46750003, 0.46750003)
 sprite_frames = SubResource("SpriteFrames_e1077")
 animation = &"new_animation"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=654518051]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1174469854]
-position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_cgh1o")
 
 [node name="Timer" type="Timer" parent="." unique_id=1575993647]

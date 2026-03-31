@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8h5b24hv8p5n"]
 
 [ext_resource type="Script" uid="uid://bi7ovmw2bk2gb" path="res://Shop/Weapons/Chip Split.gd" id="1_3weiu"]
-[ext_resource type="Texture2D" uid="uid://u3b2qoilxvm5" path="res://sprites/health_meter_purplevar.png" id="2_44iaa"]
+[ext_resource type="Texture2D" uid="uid://dlf6781cnkbbn" path="res://sprites/chip split.png" id="2_3weiu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e1077"]
 animations = [{
@@ -12,7 +12,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_44iaa")
+"texture": ExtResource("2_3weiu")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgh1o"]
-size = Vector2(31, 12)
+size = Vector2(16, 15)
 
 [node name="projectile" type="CharacterBody2D" unique_id=1717478552]
 collision_layer = 15
@@ -36,7 +36,7 @@ animation = &"new_animation"
 [node name="Area2D" type="Area2D" parent="." unique_id=654518051]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1174469854]
-position = Vector2(-0.5, 0)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_cgh1o")
 
 [node name="Timer" type="Timer" parent="." unique_id=1575993647]

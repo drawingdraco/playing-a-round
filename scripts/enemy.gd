@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var main = get_node("/root/Bedroom")
+@onready var main = get_node("/root/Bedroom/StaticBody2D")
 @onready var player = get_node("/root/Bedroom/Player")
 var speed : int = 80 + (Global.dificulty * 10)
 var direction : Vector2
@@ -15,12 +15,12 @@ func damage(value):
 	if health <= 0:
 		var exp = expsc.instantiate()
 		exp.position = position
-		main.add_child(exp)
+		main.add_sibling(exp)
 		Global.enmdef += 1
 		if Global.screw and randi_range(1,30) == 30:
 			var screw = screwsc.instantiate()
 			screw.position = position
-			main.add_child(screw)
+			main.add_sibling(screw)
 		if "Hampster ball" in Global.iteminv:
 			Global.shieldcnt += 1
 		if "glue" in Global.iteminv:

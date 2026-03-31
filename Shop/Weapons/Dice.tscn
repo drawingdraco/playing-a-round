@@ -1,21 +1,61 @@
 [gd_scene format=3 uid="uid://dmr64577rev5y"]
 
 [ext_resource type="Script" uid="uid://y5uf7ds4b7nh" path="res://Shop/Weapons/Dice.gd" id="1_73g2m"]
-[ext_resource type="Texture2D" uid="uid://bobj461qrdl5k" path="res://sprites/grass.png" id="2_f5hpg"]
+[ext_resource type="Texture2D" uid="uid://cln0v6y6jep3i" path="res://sprites/dice1.png" id="2_egcun"]
+[ext_resource type="Texture2D" uid="uid://dp0orhb76ppph" path="res://sprites/dice2.png" id="3_ubeqv"]
+[ext_resource type="Texture2D" uid="uid://bsl144n8snlur" path="res://sprites/dice3.png" id="4_lavyr"]
+[ext_resource type="Texture2D" uid="uid://bepotgypnofxq" path="res://sprites/dice4.png" id="5_y5amj"]
+[ext_resource type="Texture2D" uid="uid://d0anrfqntg2xh" path="res://sprites/dice5.png" id="6_neemi"]
+[ext_resource type="Texture2D" uid="uid://b25jw7ey3rjwk" path="res://sprites/dice6.png" id="7_r4140"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e1077"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_egcun")
+}],
 "loop": true,
-"name": &"default",
+"name": &"dice1",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_f5hpg")
+"texture": ExtResource("3_ubeqv")
 }],
 "loop": true,
-"name": &"new_animation",
+"name": &"dice2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lavyr")
+}],
+"loop": true,
+"name": &"dice3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_y5amj")
+}],
+"loop": true,
+"name": &"dice4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_neemi")
+}],
+"loop": true,
+"name": &"dice5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_r4140")
+}],
+"loop": true,
+"name": &"dice6",
 "speed": 5.0
 }]
 
@@ -31,7 +71,7 @@ script = ExtResource("1_73g2m")
 position = Vector2(-1.19209e-06, -1.19209e-06)
 scale = Vector2(0.375, 0.375)
 sprite_frames = SubResource("SpriteFrames_e1077")
-animation = &"new_animation"
+animation = &"dice6"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=654518051]
 

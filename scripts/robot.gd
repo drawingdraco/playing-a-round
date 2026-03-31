@@ -13,7 +13,7 @@ func damage(value):
 	if health <= 0:
 		var exp = expsc.instantiate()
 		exp.position = position
-		main.add_child(exp)
+		main.add_sibling(exp)
 		Global.enmdef += 1
 		Global.boss -= 1
 		queue_free()

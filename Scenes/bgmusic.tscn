@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d0843abmmr5so"]
+
+[ext_resource type="AudioStream" uid="uid://dvypuod0ie5jy" path="res://Winchifrost - Ominous Solution.mp3" id="1_30mse"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1244147232]
+stream = ExtResource("1_30mse")
+volume_db = -30.064
+pitch_scale = 0.91
+autoplay = true
+parameters/looping = true

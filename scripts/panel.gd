@@ -13,7 +13,7 @@ func updatesprite():
 	var start = len(str(amount))-1
 	var end = len(str(amount))
 	for i in get_children():
-		if i is Sprite2D:
+		if i is Sprite2D and i.name != "BG":
 			var texture = load('res://sprites/%sNum.png' % (str(amount).substr(start,end)).substr(0,1))
 			i.texture = texture
 			if amount <= 9:

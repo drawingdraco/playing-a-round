@@ -63,8 +63,8 @@ func _ready() -> void:
 	$Panel/Button/Sprite2D.texture = load("res://sprites/%s.png" %slot1)
 	$Panel/Button2/Sprite2D.texture = load("res://sprites/%s.png" %slot2)
 	$Panel/Button3/Sprite2D.texture = load("res://sprites/%s.png" %slot3)
-	Engine.time_scale = 1.0
-	freeze(0, -1)
+	
+	
 
 
 func freeze(timescale : float, duration : float):
@@ -74,7 +74,8 @@ func freeze(timescale : float, duration : float):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
-	pass
+	Engine.time_scale = 1.0
+	freeze(0, -1)
 		
 
 

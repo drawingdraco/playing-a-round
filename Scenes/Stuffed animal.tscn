@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://c3rssmyfiuoim"]
 
 [ext_resource type="Script" uid="uid://bckq3was5uhfc" path="res://scripts/stuffed_animal.gd" id="1_6vifh"]
-[ext_resource type="Texture2D" uid="uid://bdeg6farkny8o" path="res://icon.svg" id="2_rltqk"]
+[ext_resource type="Texture2D" uid="uid://tvlplpeelus" path="res://sprites/stuffed animal1.png" id="2_1nndx"]
+[ext_resource type="Texture2D" uid="uid://cw72juuv6p7t8" path="res://sprites/stuffed animal2.png" id="3_as2ts"]
+[ext_resource type="Texture2D" uid="uid://d35cbshjmiwcb" path="res://sprites/stuffed animal3.png" id="4_ce1ff"]
+[ext_resource type="Texture2D" uid="uid://cnxri1b6uel6g" path="res://sprites/stuffed animal4.png" id="5_p5b73"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_287tu"]
-size = Vector2(32, 32)
+size = Vector2(40, 34)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_afpow"]
 animations = [{
@@ -15,7 +18,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_rltqk")
+"texture": ExtResource("2_1nndx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_as2ts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ce1ff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p5b73")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -23,7 +35,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afpow"]
-size = Vector2(47, 47.5)
+size = Vector2(42, 73)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=763583890]
 collision_layer = 4
@@ -31,18 +43,21 @@ collision_mask = 6
 script = ExtResource("1_6vifh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1864373969]
+position = Vector2(-2, 24)
 shape = SubResource("RectangleShape2D_287tu")
 one_way_collision_margin = 0.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2078278233]
-position = Vector2(-1.19209e-06, -1.19209e-06)
-scale = Vector2(0.375, 0.375)
+position = Vector2(10.9375, 4.937498)
+scale = Vector2(0.5075, 0.49416667)
 sprite_frames = SubResource("SpriteFrames_afpow")
 animation = &"new_animation"
+frame_progress = 0.6564467
 
 [node name="enemyarea" type="Area2D" parent="." unique_id=1052273231]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemyarea" unique_id=1453458192]
+position = Vector2(-1, 8)
 shape = SubResource("RectangleShape2D_afpow")
 
 [connection signal="area_entered" from="enemyarea" to="." method="_on_area_2d_area_entered"]

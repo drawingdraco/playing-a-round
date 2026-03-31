@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dfqsjx6el711n"]
 
 [ext_resource type="Script" uid="uid://dbh3rcmx0hp6j" path="res://Shop/Weapons/Toy gun.gd" id="1_uuyry"]
-[ext_resource type="Texture2D" uid="uid://u3b2qoilxvm5" path="res://sprites/health_meter_purplevar.png" id="2_kgmxy"]
+[ext_resource type="Texture2D" uid="uid://bwjuwn7wnsk61" path="res://sprites/bullet.png" id="2_uuyry"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e1077"]
 animations = [{
@@ -12,7 +12,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_kgmxy")
+"texture": ExtResource("2_uuyry")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgh1o"]
-size = Vector2(31, 12)
+size = Vector2(25, 13)
 
 [node name="projectile" type="CharacterBody2D" unique_id=1717478552]
 collision_layer = 15
@@ -28,15 +28,15 @@ collision_mask = 15
 script = ExtResource("1_uuyry")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1740347206]
-position = Vector2(-1.19209e-06, -1.19209e-06)
-scale = Vector2(0.375, 0.375)
+position = Vector2(-0.99999976, -1.0000002)
+scale = Vector2(0.50750005, 0.50750005)
 sprite_frames = SubResource("SpriteFrames_e1077")
 animation = &"new_animation"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=654518051]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1174469854]
-position = Vector2(-0.5, 0)
+position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_cgh1o")
 
 [node name="Timer" type="Timer" parent="." unique_id=1575993647]

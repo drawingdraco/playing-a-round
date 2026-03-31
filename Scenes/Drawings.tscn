@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://i2qix2av4v6y"]
 
 [ext_resource type="Script" uid="uid://dclm8pq4nod5d" path="res://scripts/Drawing.gd" id="1_tb74i"]
-[ext_resource type="Texture2D" uid="uid://bdeg6farkny8o" path="res://icon.svg" id="2_fkx0g"]
+[ext_resource type="Texture2D" uid="uid://d2kr87f2xu6ou" path="res://sprites/paperairplane1.png" id="2_rtlh4"]
+[ext_resource type="Texture2D" uid="uid://inxkmpvra3o6" path="res://sprites/paperairplane2.png" id="3_7yiyq"]
+[ext_resource type="Texture2D" uid="uid://bybtns82ap57c" path="res://sprites/paperairplane3.png" id="4_dq3sk"]
+[ext_resource type="Texture2D" uid="uid://bmg8p68vq4vhc" path="res://sprites/paperairplane4.png" id="5_cykei"]
+[ext_resource type="Texture2D" uid="uid://cj2cre0ucja02" path="res://sprites/paperairplane5.png" id="6_65ucv"]
+[ext_resource type="Texture2D" uid="uid://x1pd12vh2tc6" path="res://sprites/paperairplane6.png" id="7_7j2ip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_287tu"]
 size = Vector2(32, 32)
@@ -15,11 +20,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_fkx0g")
+"texture": ExtResource("2_rtlh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7yiyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dq3sk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cykei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_65ucv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7j2ip")
 }],
 "loop": true,
 "name": &"new_animation",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afpow"]
@@ -35,10 +55,11 @@ shape = SubResource("RectangleShape2D_287tu")
 one_way_collision_margin = 0.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2078278233]
-position = Vector2(-1.19209e-06, -1.19209e-06)
-scale = Vector2(0.375, 0.375)
+position = Vector2(-1, 0.95744705)
+scale = Vector2(0.32000002, 0.3540426)
 sprite_frames = SubResource("SpriteFrames_afpow")
 animation = &"new_animation"
+frame_progress = 0.44011942
 
 [node name="enemyarea" type="Area2D" parent="." unique_id=1052273231]
 

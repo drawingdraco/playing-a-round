@@ -6,12 +6,13 @@ var shot = false
 @onready var main = get_node("/root/Bedroom")
 var expsc = preload("res://Scenes/exp.tscn")
 var explosc = preload("res://Scenes/Explosion.tscn")
-
-var damage = randi_range(1,6) + Global.damage
+var roll = randi_range(1,6) 
+var damage = roll + Global.damage
 
 
 var Attacksp = 1.5
 func _ready() -> void:
+	$AnimatedSprite2D.animation = "dice%d" %roll
 	if Global.weapinv[0] == "Dice":
 		Global.weap1sp = Attacksp
 	elif Global.weapinv[1] == "Dice":

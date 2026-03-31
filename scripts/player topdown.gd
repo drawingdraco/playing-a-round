@@ -7,9 +7,9 @@ var screen_size # Size of the game window.
 
 var timerstart = false
 
-@onready var main = get_node("/root/Bedroom")
+@onready var main = get_node("/root/Bedroom/StaticBody2D")
 @onready var cam = get_node("/root/Bedroom/Player/Camera2D")
-@onready var player = get_node("/root/Bedroom/Player")
+@onready var player = get_node("/root/Bedroom/Player/Item controler")
 @onready var _animated_sprite = $AnimatedSprite2D
 var lvupsc = preload("res://Scenes/level_up.tscn")
 
@@ -27,7 +27,7 @@ func _process(delta):
 	if "Mic" in Global.weapinv and micadd == false:
 		var micsc = load("res://Shop/Weapons/Mic.tscn")
 		var mic = micsc.instantiate()
-		player.add_child(mic)
+		player.add_sibling(mic)
 		micadd = true
 	
 	
@@ -68,7 +68,7 @@ func _process(delta):
 	if Global.pexp >= Global.to_next_level:
 		var lvup = lvupsc.instantiate()
 		lvup.position = get_child(0).position
-		cam.add_child(lvup)
+		cam.add_sibling(lvup)
 		
 
 
@@ -89,7 +89,8 @@ func _on_weapon_1_timeout() -> void:
 		var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
 		var projectile = projectsc.instantiate()
 		projectile.position = global_position
-		main.add_child(projectile)
+		projectile.rotation = get_angle_to(get_global_mouse_position())
+		main.add_sibling(projectile)
 
 
 func _on_weapon_2_timeout() -> void:
@@ -102,7 +103,8 @@ func _on_weapon_2_timeout() -> void:
 			var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
 			var projectile = projectsc.instantiate()
 			projectile.position = global_position
-			main.add_child(projectile)
+			projectile.rotation = get_angle_to(get_global_mouse_position())
+			main.add_sibling(projectile)
 
 
 func _on_weapon_3_timeout() -> void:
@@ -115,7 +117,8 @@ func _on_weapon_3_timeout() -> void:
 			var projectsc = load("res://Shop/Weapons/%s.tscn" %weapon)
 			var projectile = projectsc.instantiate()
 			projectile.position = global_position
-			main.add_child(projectile)
+			projectile.rotation = get_angle_to(get_global_mouse_position())
+			main.add_sibling(projectile)
 
 
 func _on_invincibility_timeout() -> void:

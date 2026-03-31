@@ -2,16 +2,32 @@
 
 [ext_resource type="Script" uid="uid://cot6vtrff2iix" path="res://scripts/wave_control.gd" id="1_ga3b8"]
 [ext_resource type="Script" uid="uid://dajusxvb3ukjq" path="res://scripts/panel.gd" id="2_trxva"]
+[ext_resource type="Texture2D" uid="uid://0qx8xe5grfb4" path="res://sprites/amountchose.png" id="3_lymil"]
 [ext_resource type="Texture2D" uid="uid://c7rubqcwc14o7" path="res://sprites/0Num.png" id="3_v0lov"]
+[ext_resource type="Texture2D" uid="uid://csb7rtue6pe0c" path="res://sprites/upbut.png" id="4_62g12"]
+[ext_resource type="Texture2D" uid="uid://bn1gtjue27m61" path="res://sprites/Brickmen1.png" id="4_hpaht"]
+[ext_resource type="Texture2D" uid="uid://cys48x1e4jy45" path="res://sprites/army man1.png" id="5_dihwt"]
+[ext_resource type="Texture2D" uid="uid://cye0ao864evyh" path="res://sprites/downbut.png" id="5_ec266"]
+[ext_resource type="Texture2D" uid="uid://d2kr87f2xu6ou" path="res://sprites/paperairplane1.png" id="6_asspg"]
+[ext_resource type="Texture2D" uid="uid://tvlplpeelus" path="res://sprites/stuffed animal1.png" id="7_lymil"]
+[ext_resource type="Texture2D" uid="uid://cu2cr5l1ylro3" path="res://sprites/robot1.png" id="11_62g12"]
 
 [node name="Wave control" type="Control" unique_id=413652294]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ga3b8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=305209469]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 644.0
+color = Color(0.14446032, 0.15078735, 0.158016, 1)
 
 [node name="Start" type="Button" parent="." unique_id=1993416133]
 layout_mode = 0
@@ -23,769 +39,1055 @@ text = "START"
 
 [node name="BrickMen" type="Panel" parent="." unique_id=1169983510]
 layout_mode = 0
-offset_left = 147.0
-offset_top = 379.0
-offset_right = 227.0
-offset_bottom = 464.0
+offset_left = 129.5
+offset_top = 360.5
+offset_right = 209.5
+offset_bottom = 445.5
 script = ExtResource("2_trxva")
+
+[node name="BG" type="Sprite2D" parent="BrickMen" unique_id=618899287]
+position = Vector2(41.5, 44.5)
+scale = Vector2(0.55666673, 0.55666673)
+texture = ExtResource("3_lymil")
 
 [node name="Button" type="Button" parent="BrickMen" unique_id=1774131736]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
+offset_left = 52.5
+offset_top = 8.5
+offset_right = 70.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
 [node name="Button2" type="Button" parent="BrickMen" unique_id=80808248]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 60.0
-offset_right = 76.0
-offset_bottom = 81.0
+offset_left = 52.5
+offset_top = 61.5
+offset_right = 71.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Sprite2D" type="Sprite2D" parent="BrickMen" unique_id=465883951]
-position = Vector2(64, 44)
+position = Vector2(62.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
 [node name="Sprite2D2" type="Sprite2D" parent="BrickMen" unique_id=1932106692]
-position = Vector2(40.26, 44)
+position = Vector2(40.500004, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
 [node name="Sprite2D3" type="Sprite2D" parent="BrickMen" unique_id=1176796159]
-position = Vector2(14, 44)
+position = Vector2(18.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
 [node name="Button3" type="Button" parent="BrickMen" unique_id=1841976969]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 7.0
-offset_right = 51.0
-offset_bottom = 28.0
+offset_left = 29.5
+offset_top = 8.5
+offset_right = 47.5
+offset_bottom = 26.5
+icon = ExtResource("4_62g12")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button4" type="Button" parent="BrickMen" unique_id=2063814851]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 60.0
-offset_right = 51.0
-offset_bottom = 81.0
+offset_left = 30.5
+offset_top = 61.5
+offset_right = 48.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button5" type="Button" parent="BrickMen" unique_id=1112349940]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 25.0
-offset_bottom = 28.0
+offset_left = 8.5
+offset_top = 8.5
+offset_right = 26.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
 [node name="Button6" type="Button" parent="BrickMen" unique_id=1706763710]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 25.0
-offset_bottom = 81.0
+offset_left = 7.5
+offset_top = 61.5
+offset_right = 26.5
+offset_bottom = 81.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Armymen" type="Panel" parent="." unique_id=304110761]
+[node name="Armymen" type="Panel" parent="." unique_id=103485982]
 layout_mode = 0
-offset_left = 260.0
-offset_top = 380.0
-offset_right = 340.0
-offset_bottom = 465.0
+offset_left = 242.0
+offset_top = 364.0
+offset_right = 322.0
+offset_bottom = 449.0
 script = ExtResource("2_trxva")
 
-[node name="Button" type="Button" parent="Armymen" unique_id=286971712]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
+[node name="BG" type="Sprite2D" parent="Armymen" unique_id=1857137447]
+position = Vector2(41.5, 44.5)
+scale = Vector2(0.55666673, 0.55666673)
+texture = ExtResource("3_lymil")
 
-[node name="Button2" type="Button" parent="Armymen" unique_id=2047836306]
+[node name="Button" type="Button" parent="Armymen" unique_id=268619488]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 60.0
-offset_right = 76.0
-offset_bottom = 81.0
+offset_left = 52.5
+offset_top = 8.5
+offset_right = 70.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Armymen" unique_id=386258471]
-position = Vector2(64, 44)
+[node name="Button2" type="Button" parent="Armymen" unique_id=313784675]
+layout_mode = 0
+offset_left = 52.5
+offset_top = 61.5
+offset_right = 71.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Armymen" unique_id=111750249]
+position = Vector2(62.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Armymen" unique_id=1576700952]
-position = Vector2(40.26, 44)
+[node name="Sprite2D2" type="Sprite2D" parent="Armymen" unique_id=5235876]
+position = Vector2(40.500004, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Armymen" unique_id=1253409435]
-position = Vector2(14, 44)
+[node name="Sprite2D3" type="Sprite2D" parent="Armymen" unique_id=1372256609]
+position = Vector2(18.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Button3" type="Button" parent="Armymen" unique_id=683316376]
+[node name="Button3" type="Button" parent="Armymen" unique_id=707547372]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 7.0
-offset_right = 51.0
-offset_bottom = 28.0
+offset_left = 29.5
+offset_top = 8.5
+offset_right = 47.5
+offset_bottom = 26.5
+icon = ExtResource("4_62g12")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button4" type="Button" parent="Armymen" unique_id=155449119]
+[node name="Button4" type="Button" parent="Armymen" unique_id=1486734799]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 60.0
-offset_right = 51.0
-offset_bottom = 81.0
+offset_left = 30.5
+offset_top = 61.5
+offset_right = 48.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button5" type="Button" parent="Armymen" unique_id=1414944948]
+[node name="Button5" type="Button" parent="Armymen" unique_id=1016418013]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 25.0
-offset_bottom = 28.0
+offset_left = 8.5
+offset_top = 8.5
+offset_right = 26.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Button6" type="Button" parent="Armymen" unique_id=381867506]
+[node name="Button6" type="Button" parent="Armymen" unique_id=631455576]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 25.0
-offset_bottom = 81.0
+offset_left = 7.5
+offset_top = 61.5
+offset_right = 26.5
+offset_bottom = 81.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Lock" type="Panel" parent="." unique_id=992147147]
-visible = false
+[node name="BrickMen2" type="Panel" parent="." unique_id=421031174]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 362.0
-offset_right = 358.0
-offset_bottom = 479.0
-
-[node name="BrickMen2" type="Panel" parent="." unique_id=1191406923]
-layout_mode = 0
-offset_left = 460.0
-offset_top = 377.0
-offset_right = 540.0
-offset_bottom = 462.0
+offset_left = 452.0
+offset_top = 411.0
+offset_right = 532.0
+offset_bottom = 496.0
 script = ExtResource("2_trxva")
 
-[node name="Button" type="Button" parent="BrickMen2" unique_id=1277521902]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
+[node name="BG" type="Sprite2D" parent="BrickMen2" unique_id=604950134]
+position = Vector2(41.5, 44.5)
+scale = Vector2(0.55666673, 0.55666673)
+texture = ExtResource("3_lymil")
 
-[node name="Button2" type="Button" parent="BrickMen2" unique_id=1191837905]
+[node name="Button" type="Button" parent="BrickMen2" unique_id=1513013556]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 60.0
-offset_right = 76.0
-offset_bottom = 81.0
+offset_left = 52.5
+offset_top = 8.5
+offset_right = 70.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BrickMen2" unique_id=808095008]
-position = Vector2(64, 44)
+[node name="Button2" type="Button" parent="BrickMen2" unique_id=1756759113]
+layout_mode = 0
+offset_left = 52.5
+offset_top = 61.5
+offset_right = 71.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BrickMen2" unique_id=1701749696]
+position = Vector2(62.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D2" type="Sprite2D" parent="BrickMen2" unique_id=1296315989]
-position = Vector2(40.26, 44)
+[node name="Sprite2D2" type="Sprite2D" parent="BrickMen2" unique_id=1134071241]
+position = Vector2(40.500004, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D3" type="Sprite2D" parent="BrickMen2" unique_id=704131390]
-position = Vector2(14, 44)
+[node name="Sprite2D3" type="Sprite2D" parent="BrickMen2" unique_id=928699537]
+position = Vector2(18.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Button3" type="Button" parent="BrickMen2" unique_id=621755011]
+[node name="Button3" type="Button" parent="BrickMen2" unique_id=888840508]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 7.0
-offset_right = 51.0
-offset_bottom = 28.0
+offset_left = 29.5
+offset_top = 8.5
+offset_right = 47.5
+offset_bottom = 26.5
+icon = ExtResource("4_62g12")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button4" type="Button" parent="BrickMen2" unique_id=1450096223]
+[node name="Button4" type="Button" parent="BrickMen2" unique_id=1549604199]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 60.0
-offset_right = 51.0
-offset_bottom = 81.0
+offset_left = 30.5
+offset_top = 61.5
+offset_right = 48.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button5" type="Button" parent="BrickMen2" unique_id=1816435807]
+[node name="Button5" type="Button" parent="BrickMen2" unique_id=604693923]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 25.0
-offset_bottom = 28.0
+offset_left = 8.5
+offset_top = 8.5
+offset_right = 26.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Button6" type="Button" parent="BrickMen2" unique_id=1649594512]
+[node name="Button6" type="Button" parent="BrickMen2" unique_id=954410482]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 25.0
-offset_bottom = 81.0
+offset_left = 7.5
+offset_top = 61.5
+offset_right = 26.5
+offset_bottom = 81.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Armymen2" type="Panel" parent="." unique_id=1649709810]
+[node name="Armymen2" type="Panel" parent="." unique_id=768720933]
 layout_mode = 0
-offset_left = 573.0
-offset_top = 378.0
-offset_right = 653.0
-offset_bottom = 463.0
+offset_left = 564.5
+offset_top = 414.5
+offset_right = 644.5
+offset_bottom = 499.5
 script = ExtResource("2_trxva")
 
-[node name="Button" type="Button" parent="Armymen2" unique_id=1339910948]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
+[node name="BG" type="Sprite2D" parent="Armymen2" unique_id=1380948101]
+position = Vector2(41.5, 44.5)
+scale = Vector2(0.55666673, 0.55666673)
+texture = ExtResource("3_lymil")
 
-[node name="Button2" type="Button" parent="Armymen2" unique_id=806179249]
+[node name="Button" type="Button" parent="Armymen2" unique_id=1982175834]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 60.0
-offset_right = 76.0
-offset_bottom = 81.0
+offset_left = 52.5
+offset_top = 8.5
+offset_right = 70.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Armymen2" unique_id=804350170]
-position = Vector2(64, 44)
+[node name="Button2" type="Button" parent="Armymen2" unique_id=259407482]
+layout_mode = 0
+offset_left = 52.5
+offset_top = 61.5
+offset_right = 71.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Armymen2" unique_id=2028222032]
+position = Vector2(62.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Armymen2" unique_id=326926632]
-position = Vector2(40.26, 44)
+[node name="Sprite2D2" type="Sprite2D" parent="Armymen2" unique_id=1458091853]
+position = Vector2(40.500004, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Armymen2" unique_id=1739285594]
-position = Vector2(14, 44)
+[node name="Sprite2D3" type="Sprite2D" parent="Armymen2" unique_id=97959851]
+position = Vector2(18.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Button3" type="Button" parent="Armymen2" unique_id=945971617]
+[node name="Button3" type="Button" parent="Armymen2" unique_id=555161098]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 7.0
-offset_right = 51.0
-offset_bottom = 28.0
+offset_left = 29.5
+offset_top = 8.5
+offset_right = 47.5
+offset_bottom = 26.5
+icon = ExtResource("4_62g12")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button4" type="Button" parent="Armymen2" unique_id=1626435514]
+[node name="Button4" type="Button" parent="Armymen2" unique_id=1807975565]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 60.0
-offset_right = 51.0
-offset_bottom = 81.0
+offset_left = 30.5
+offset_top = 61.5
+offset_right = 48.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button5" type="Button" parent="Armymen2" unique_id=550818285]
+[node name="Button5" type="Button" parent="Armymen2" unique_id=308805325]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 25.0
-offset_bottom = 28.0
+offset_left = 8.5
+offset_top = 8.5
+offset_right = 26.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Button6" type="Button" parent="Armymen2" unique_id=895822304]
+[node name="Button6" type="Button" parent="Armymen2" unique_id=1970318303]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 25.0
-offset_bottom = 81.0
+offset_left = 7.5
+offset_top = 61.5
+offset_right = 26.5
+offset_bottom = 81.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="drawings" type="Panel" parent="." unique_id=386779199]
+[node name="drawings" type="Panel" parent="." unique_id=86231937]
 layout_mode = 0
-offset_left = 461.0
-offset_top = 253.0
-offset_right = 541.0
-offset_bottom = 338.0
+offset_left = 455.0
+offset_top = 212.0
+offset_right = 535.0
+offset_bottom = 297.0
 script = ExtResource("2_trxva")
 
-[node name="Button" type="Button" parent="drawings" unique_id=1649438452]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
+[node name="BG" type="Sprite2D" parent="drawings" unique_id=762473614]
+position = Vector2(41.5, 44.5)
+scale = Vector2(0.55666673, 0.55666673)
+texture = ExtResource("3_lymil")
 
-[node name="Button2" type="Button" parent="drawings" unique_id=287671769]
+[node name="Button" type="Button" parent="drawings" unique_id=1217670830]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 60.0
-offset_right = 76.0
-offset_bottom = 81.0
+offset_left = 52.5
+offset_top = 8.5
+offset_right = 70.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="drawings" unique_id=1690490974]
-position = Vector2(64, 44)
+[node name="Button2" type="Button" parent="drawings" unique_id=1816010917]
+layout_mode = 0
+offset_left = 52.5
+offset_top = 61.5
+offset_right = 71.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="drawings" unique_id=278657683]
+position = Vector2(62.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D2" type="Sprite2D" parent="drawings" unique_id=523021554]
-position = Vector2(40.26, 44)
+[node name="Sprite2D2" type="Sprite2D" parent="drawings" unique_id=952356188]
+position = Vector2(40.500004, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D3" type="Sprite2D" parent="drawings" unique_id=410981289]
-position = Vector2(14, 44)
+[node name="Sprite2D3" type="Sprite2D" parent="drawings" unique_id=1084946858]
+position = Vector2(18.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Button3" type="Button" parent="drawings" unique_id=129767605]
+[node name="Button3" type="Button" parent="drawings" unique_id=406119110]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 7.0
-offset_right = 51.0
-offset_bottom = 28.0
+offset_left = 29.5
+offset_top = 8.5
+offset_right = 47.5
+offset_bottom = 26.5
+icon = ExtResource("4_62g12")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button4" type="Button" parent="drawings" unique_id=72189485]
+[node name="Button4" type="Button" parent="drawings" unique_id=541397834]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 60.0
-offset_right = 51.0
-offset_bottom = 81.0
+offset_left = 30.5
+offset_top = 61.5
+offset_right = 48.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button5" type="Button" parent="drawings" unique_id=472898915]
+[node name="Button5" type="Button" parent="drawings" unique_id=1649758756]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 25.0
-offset_bottom = 28.0
+offset_left = 8.5
+offset_top = 8.5
+offset_right = 26.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Button6" type="Button" parent="drawings" unique_id=2033109269]
+[node name="Button6" type="Button" parent="drawings" unique_id=1357169840]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 25.0
-offset_bottom = 81.0
+offset_left = 7.5
+offset_top = 61.5
+offset_right = 26.5
+offset_bottom = 81.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Stuffed animals" type="Panel" parent="." unique_id=1630640968]
+[node name="Stuffed animals" type="Panel" parent="." unique_id=265399051]
 layout_mode = 0
-offset_left = 574.0
-offset_top = 254.0
-offset_right = 654.0
-offset_bottom = 339.0
+offset_left = 567.0
+offset_top = 214.0
+offset_right = 647.0
+offset_bottom = 299.0
 script = ExtResource("2_trxva")
 
-[node name="Button" type="Button" parent="Stuffed animals" unique_id=1877622518]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
+[node name="BG" type="Sprite2D" parent="Stuffed animals" unique_id=242015761]
+position = Vector2(41.5, 44.5)
+scale = Vector2(0.55666673, 0.55666673)
+texture = ExtResource("3_lymil")
 
-[node name="Button2" type="Button" parent="Stuffed animals" unique_id=1620370007]
+[node name="Button" type="Button" parent="Stuffed animals" unique_id=1057699579]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 60.0
-offset_right = 76.0
-offset_bottom = 81.0
+offset_left = 52.5
+offset_top = 8.5
+offset_right = 70.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Stuffed animals" unique_id=166189979]
-position = Vector2(64, 44)
+[node name="Button2" type="Button" parent="Stuffed animals" unique_id=1931815065]
+layout_mode = 0
+offset_left = 52.5
+offset_top = 61.5
+offset_right = 71.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Stuffed animals" unique_id=1682802858]
+position = Vector2(62.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Stuffed animals" unique_id=370629064]
-position = Vector2(40.26, 44)
+[node name="Sprite2D2" type="Sprite2D" parent="Stuffed animals" unique_id=1859585620]
+position = Vector2(40.500004, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Stuffed animals" unique_id=58210245]
-position = Vector2(14, 44)
+[node name="Sprite2D3" type="Sprite2D" parent="Stuffed animals" unique_id=365664945]
+position = Vector2(18.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Button3" type="Button" parent="Stuffed animals" unique_id=134715309]
+[node name="Button3" type="Button" parent="Stuffed animals" unique_id=1720665988]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 7.0
-offset_right = 51.0
-offset_bottom = 28.0
+offset_left = 29.5
+offset_top = 8.5
+offset_right = 47.5
+offset_bottom = 26.5
+icon = ExtResource("4_62g12")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button4" type="Button" parent="Stuffed animals" unique_id=668297027]
+[node name="Button4" type="Button" parent="Stuffed animals" unique_id=90278366]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 60.0
-offset_right = 51.0
-offset_bottom = 81.0
+offset_left = 30.5
+offset_top = 61.5
+offset_right = 48.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button5" type="Button" parent="Stuffed animals" unique_id=135382857]
+[node name="Button5" type="Button" parent="Stuffed animals" unique_id=107561253]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 25.0
-offset_bottom = 28.0
+offset_left = 8.5
+offset_top = 8.5
+offset_right = 26.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Button6" type="Button" parent="Stuffed animals" unique_id=1593854425]
+[node name="Button6" type="Button" parent="Stuffed animals" unique_id=542633258]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 25.0
-offset_bottom = 81.0
+offset_left = 7.5
+offset_top = 61.5
+offset_right = 26.5
+offset_bottom = 81.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="BrickMen3" type="Panel" parent="." unique_id=817399649]
+[node name="BrickMen3" type="Panel" parent="." unique_id=1032329723]
 layout_mode = 0
-offset_left = 841.0
-offset_top = 403.0
-offset_right = 921.0
-offset_bottom = 488.0
+offset_left = 844.0
+offset_top = 413.0
+offset_right = 924.0
+offset_bottom = 498.0
 script = ExtResource("2_trxva")
 
-[node name="Button" type="Button" parent="BrickMen3" unique_id=1188691682]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
+[node name="BG" type="Sprite2D" parent="BrickMen3" unique_id=1691993988]
+position = Vector2(41.5, 44.5)
+scale = Vector2(0.55666673, 0.55666673)
+texture = ExtResource("3_lymil")
 
-[node name="Button2" type="Button" parent="BrickMen3" unique_id=151797429]
+[node name="Button" type="Button" parent="BrickMen3" unique_id=1218130284]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 60.0
-offset_right = 76.0
-offset_bottom = 81.0
+offset_left = 52.5
+offset_top = 8.5
+offset_right = 70.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BrickMen3" unique_id=1357766012]
-position = Vector2(64, 44)
+[node name="Button2" type="Button" parent="BrickMen3" unique_id=32142866]
+layout_mode = 0
+offset_left = 52.5
+offset_top = 61.5
+offset_right = 71.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BrickMen3" unique_id=1222160978]
+position = Vector2(62.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D2" type="Sprite2D" parent="BrickMen3" unique_id=2082431159]
-position = Vector2(40.26, 44)
+[node name="Sprite2D2" type="Sprite2D" parent="BrickMen3" unique_id=830055801]
+position = Vector2(40.500004, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D3" type="Sprite2D" parent="BrickMen3" unique_id=1542581759]
-position = Vector2(14, 44)
+[node name="Sprite2D3" type="Sprite2D" parent="BrickMen3" unique_id=163594776]
+position = Vector2(18.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Button3" type="Button" parent="BrickMen3" unique_id=1040973854]
+[node name="Button3" type="Button" parent="BrickMen3" unique_id=2000874956]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 7.0
-offset_right = 51.0
-offset_bottom = 28.0
+offset_left = 29.5
+offset_top = 8.5
+offset_right = 47.5
+offset_bottom = 26.5
+icon = ExtResource("4_62g12")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button4" type="Button" parent="BrickMen3" unique_id=668971111]
+[node name="Button4" type="Button" parent="BrickMen3" unique_id=1718300037]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 60.0
-offset_right = 51.0
-offset_bottom = 81.0
+offset_left = 30.5
+offset_top = 61.5
+offset_right = 48.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button5" type="Button" parent="BrickMen3" unique_id=104959940]
+[node name="Button5" type="Button" parent="BrickMen3" unique_id=1447951773]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 25.0
-offset_bottom = 28.0
+offset_left = 8.5
+offset_top = 8.5
+offset_right = 26.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Button6" type="Button" parent="BrickMen3" unique_id=1345921957]
+[node name="Button6" type="Button" parent="BrickMen3" unique_id=1662131962]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 25.0
-offset_bottom = 81.0
+offset_left = 7.5
+offset_top = 61.5
+offset_right = 26.5
+offset_bottom = 81.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Armymen3" type="Panel" parent="." unique_id=2095091563]
+[node name="Armymen3" type="Panel" parent="." unique_id=1764448958]
 layout_mode = 0
-offset_left = 954.0
-offset_top = 404.0
-offset_right = 1034.0
-offset_bottom = 489.0
+offset_left = 1007.0
+offset_top = 418.0
+offset_right = 1087.0
+offset_bottom = 503.0
 script = ExtResource("2_trxva")
 
-[node name="Button" type="Button" parent="Armymen3" unique_id=615730146]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
+[node name="BG" type="Sprite2D" parent="Armymen3" unique_id=635096112]
+position = Vector2(41.5, 44.5)
+scale = Vector2(0.55666673, 0.55666673)
+texture = ExtResource("3_lymil")
 
-[node name="Button2" type="Button" parent="Armymen3" unique_id=317939983]
+[node name="Button" type="Button" parent="Armymen3" unique_id=1874860701]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 60.0
-offset_right = 76.0
-offset_bottom = 81.0
+offset_left = 52.5
+offset_top = 8.5
+offset_right = 70.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Armymen3" unique_id=600533368]
-position = Vector2(64, 44)
+[node name="Button2" type="Button" parent="Armymen3" unique_id=1829454806]
+layout_mode = 0
+offset_left = 52.5
+offset_top = 61.5
+offset_right = 71.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Armymen3" unique_id=1855886124]
+position = Vector2(62.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Armymen3" unique_id=241579980]
-position = Vector2(40.26, 44)
+[node name="Sprite2D2" type="Sprite2D" parent="Armymen3" unique_id=1747809087]
+position = Vector2(40.500004, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Armymen3" unique_id=261513320]
-position = Vector2(14, 44)
+[node name="Sprite2D3" type="Sprite2D" parent="Armymen3" unique_id=1669346323]
+position = Vector2(18.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Button3" type="Button" parent="Armymen3" unique_id=1500548596]
+[node name="Button3" type="Button" parent="Armymen3" unique_id=225194639]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 7.0
-offset_right = 51.0
-offset_bottom = 28.0
+offset_left = 29.5
+offset_top = 8.5
+offset_right = 47.5
+offset_bottom = 26.5
+icon = ExtResource("4_62g12")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button4" type="Button" parent="Armymen3" unique_id=2002694227]
+[node name="Button4" type="Button" parent="Armymen3" unique_id=2034543161]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 60.0
-offset_right = 51.0
-offset_bottom = 81.0
+offset_left = 30.5
+offset_top = 61.5
+offset_right = 48.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button5" type="Button" parent="Armymen3" unique_id=664324076]
+[node name="Button5" type="Button" parent="Armymen3" unique_id=1237878379]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 25.0
-offset_bottom = 28.0
+offset_left = 8.5
+offset_top = 8.5
+offset_right = 26.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Button6" type="Button" parent="Armymen3" unique_id=1125028812]
+[node name="Button6" type="Button" parent="Armymen3" unique_id=790625069]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 25.0
-offset_bottom = 81.0
+offset_left = 7.5
+offset_top = 61.5
+offset_right = 26.5
+offset_bottom = 81.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="drawings2" type="Panel" parent="." unique_id=1482543372]
+[node name="drawings2" type="Panel" parent="." unique_id=1559857154]
 layout_mode = 0
-offset_left = 842.0
-offset_top = 279.0
-offset_right = 922.0
-offset_bottom = 364.0
+offset_left = 843.0
+offset_top = 287.0
+offset_right = 923.0
+offset_bottom = 372.0
 script = ExtResource("2_trxva")
 
-[node name="Button" type="Button" parent="drawings2" unique_id=1657563568]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
+[node name="BG" type="Sprite2D" parent="drawings2" unique_id=8651334]
+position = Vector2(41.5, 44.5)
+scale = Vector2(0.55666673, 0.55666673)
+texture = ExtResource("3_lymil")
 
-[node name="Button2" type="Button" parent="drawings2" unique_id=1914458126]
+[node name="Button" type="Button" parent="drawings2" unique_id=1807340071]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 60.0
-offset_right = 76.0
-offset_bottom = 81.0
+offset_left = 52.5
+offset_top = 8.5
+offset_right = 70.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="drawings2" unique_id=340111540]
-position = Vector2(64, 44)
+[node name="Button2" type="Button" parent="drawings2" unique_id=1573972772]
+layout_mode = 0
+offset_left = 52.5
+offset_top = 61.5
+offset_right = 71.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="drawings2" unique_id=1504091438]
+position = Vector2(62.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D2" type="Sprite2D" parent="drawings2" unique_id=347612162]
-position = Vector2(40.26, 44)
+[node name="Sprite2D2" type="Sprite2D" parent="drawings2" unique_id=13942395]
+position = Vector2(40.500004, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D3" type="Sprite2D" parent="drawings2" unique_id=152509387]
-position = Vector2(14, 44)
+[node name="Sprite2D3" type="Sprite2D" parent="drawings2" unique_id=1282880494]
+position = Vector2(18.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Button3" type="Button" parent="drawings2" unique_id=1969158201]
+[node name="Button3" type="Button" parent="drawings2" unique_id=660250122]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 7.0
-offset_right = 51.0
-offset_bottom = 28.0
+offset_left = 29.5
+offset_top = 8.5
+offset_right = 47.5
+offset_bottom = 26.5
+icon = ExtResource("4_62g12")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button4" type="Button" parent="drawings2" unique_id=1402978260]
+[node name="Button4" type="Button" parent="drawings2" unique_id=1899573899]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 60.0
-offset_right = 51.0
-offset_bottom = 81.0
+offset_left = 30.5
+offset_top = 61.5
+offset_right = 48.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button5" type="Button" parent="drawings2" unique_id=1754263685]
+[node name="Button5" type="Button" parent="drawings2" unique_id=962536136]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 25.0
-offset_bottom = 28.0
+offset_left = 8.5
+offset_top = 8.5
+offset_right = 26.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Button6" type="Button" parent="drawings2" unique_id=1259379326]
+[node name="Button6" type="Button" parent="drawings2" unique_id=771701243]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 25.0
-offset_bottom = 81.0
+offset_left = 7.5
+offset_top = 61.5
+offset_right = 26.5
+offset_bottom = 81.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Stuffed animals2" type="Panel" parent="." unique_id=839156363]
+[node name="Stuffed animals2" type="Panel" parent="." unique_id=1741244128]
 layout_mode = 0
-offset_left = 955.0
-offset_top = 280.0
-offset_right = 1035.0
-offset_bottom = 365.0
+offset_left = 1004.0
+offset_top = 292.0
+offset_right = 1084.0
+offset_bottom = 377.0
 script = ExtResource("2_trxva")
 
-[node name="Button" type="Button" parent="Stuffed animals2" unique_id=2012581584]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
+[node name="BG" type="Sprite2D" parent="Stuffed animals2" unique_id=1396126664]
+position = Vector2(41.5, 44.5)
+scale = Vector2(0.55666673, 0.55666673)
+texture = ExtResource("3_lymil")
 
-[node name="Button2" type="Button" parent="Stuffed animals2" unique_id=913966219]
+[node name="Button" type="Button" parent="Stuffed animals2" unique_id=519859697]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 60.0
-offset_right = 76.0
-offset_bottom = 81.0
+offset_left = 52.5
+offset_top = 8.5
+offset_right = 70.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Stuffed animals2" unique_id=173562400]
-position = Vector2(64, 44)
+[node name="Button2" type="Button" parent="Stuffed animals2" unique_id=352374956]
+layout_mode = 0
+offset_left = 52.5
+offset_top = 61.5
+offset_right = 71.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Stuffed animals2" unique_id=657695147]
+position = Vector2(62.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Stuffed animals2" unique_id=185851594]
-position = Vector2(40.26, 44)
+[node name="Sprite2D2" type="Sprite2D" parent="Stuffed animals2" unique_id=1995701061]
+position = Vector2(40.500004, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Stuffed animals2" unique_id=566716933]
-position = Vector2(14, 44)
+[node name="Sprite2D3" type="Sprite2D" parent="Stuffed animals2" unique_id=1788602426]
+position = Vector2(18.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Button3" type="Button" parent="Stuffed animals2" unique_id=1030684951]
+[node name="Button3" type="Button" parent="Stuffed animals2" unique_id=422206872]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 7.0
-offset_right = 51.0
-offset_bottom = 28.0
+offset_left = 29.5
+offset_top = 8.5
+offset_right = 47.5
+offset_bottom = 26.5
+icon = ExtResource("4_62g12")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button4" type="Button" parent="Stuffed animals2" unique_id=896356563]
+[node name="Button4" type="Button" parent="Stuffed animals2" unique_id=603910111]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 60.0
-offset_right = 51.0
-offset_bottom = 81.0
+offset_left = 30.5
+offset_top = 61.5
+offset_right = 48.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button5" type="Button" parent="Stuffed animals2" unique_id=1635585625]
+[node name="Button5" type="Button" parent="Stuffed animals2" unique_id=114229365]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 25.0
-offset_bottom = 28.0
+offset_left = 8.5
+offset_top = 8.5
+offset_right = 26.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Button6" type="Button" parent="Stuffed animals2" unique_id=438828366]
+[node name="Button6" type="Button" parent="Stuffed animals2" unique_id=765853193]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 25.0
-offset_bottom = 81.0
+offset_left = 7.5
+offset_top = 61.5
+offset_right = 26.5
+offset_bottom = 81.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Robot" type="Panel" parent="." unique_id=165161296]
+[node name="Robot" type="Panel" parent="." unique_id=1728871173]
 layout_mode = 0
-offset_left = 900.0
-offset_top = 177.0
-offset_right = 980.0
-offset_bottom = 262.0
+offset_left = 925.0
+offset_top = 197.0
+offset_right = 1005.0
+offset_bottom = 282.0
 script = ExtResource("2_trxva")
 
-[node name="Button" type="Button" parent="Robot" unique_id=2142068357]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 7.0
-offset_right = 76.0
-offset_bottom = 28.0
+[node name="BG" type="Sprite2D" parent="Robot" unique_id=924407680]
+position = Vector2(41.5, 44.5)
+scale = Vector2(0.55666673, 0.55666673)
+texture = ExtResource("3_lymil")
 
-[node name="Button2" type="Button" parent="Robot" unique_id=423344438]
+[node name="Button" type="Button" parent="Robot" unique_id=288665059]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 60.0
-offset_right = 76.0
-offset_bottom = 81.0
+offset_left = 52.5
+offset_top = 8.5
+offset_right = 70.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Robot" unique_id=260656553]
-position = Vector2(64, 44)
+[node name="Button2" type="Button" parent="Robot" unique_id=1626702766]
+layout_mode = 0
+offset_left = 52.5
+offset_top = 61.5
+offset_right = 71.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Robot" unique_id=1242098999]
+position = Vector2(62.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Robot" unique_id=2013152899]
-position = Vector2(40.26, 44)
+[node name="Sprite2D2" type="Sprite2D" parent="Robot" unique_id=1902946474]
+position = Vector2(40.500004, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Robot" unique_id=606332750]
-position = Vector2(14, 44)
+[node name="Sprite2D3" type="Sprite2D" parent="Robot" unique_id=544600526]
+position = Vector2(18.5, 44.5)
 scale = Vector2(1.6999986, 1.900001)
 texture = ExtResource("3_v0lov")
 
-[node name="Button3" type="Button" parent="Robot" unique_id=1782284343]
+[node name="Button3" type="Button" parent="Robot" unique_id=1031508920]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 7.0
-offset_right = 51.0
-offset_bottom = 28.0
+offset_left = 29.5
+offset_top = 8.5
+offset_right = 47.5
+offset_bottom = 26.5
+icon = ExtResource("4_62g12")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button4" type="Button" parent="Robot" unique_id=282474279]
+[node name="Button4" type="Button" parent="Robot" unique_id=1786206445]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 60.0
-offset_right = 51.0
-offset_bottom = 81.0
+offset_left = 30.5
+offset_top = 61.5
+offset_right = 48.5
+offset_bottom = 80.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button5" type="Button" parent="Robot" unique_id=2060238027]
+[node name="Button5" type="Button" parent="Robot" unique_id=1651070235]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 25.0
-offset_bottom = 28.0
+offset_left = 8.5
+offset_top = 8.5
+offset_right = 26.5
+offset_bottom = 27.5
+icon = ExtResource("4_62g12")
+expand_icon = true
 
-[node name="Button6" type="Button" parent="Robot" unique_id=89714]
+[node name="Button6" type="Button" parent="Robot" unique_id=855203315]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 25.0
-offset_bottom = 81.0
-
-[node name="Lock3" type="Panel" parent="." unique_id=1190117666]
-visible = false
-layout_mode = 0
-offset_left = 821.0
-offset_top = 157.0
-offset_right = 1051.0
-offset_bottom = 491.0
-
-[node name="Lock2" type="Panel" parent="." unique_id=715905475]
-visible = false
-layout_mode = 0
-offset_left = 443.0
-offset_top = 216.0
-offset_right = 673.0
-offset_bottom = 472.0
+offset_left = 7.5
+offset_top = 61.5
+offset_right = 26.5
+offset_bottom = 81.5
+icon = ExtResource("5_ec266")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Label3" type="Label" parent="." unique_id=385334124]
 layout_mode = 0
-offset_left = 822.0
-offset_top = 17.0
-offset_right = 1030.0
-offset_bottom = 89.0
+offset_left = 819.0
+offset_top = 6.0
+offset_right = 1027.0
+offset_bottom = 78.0
 theme_override_font_sizes/font_size = 52
 text = "Wave 3 :"
 
 [node name="Label2" type="Label" parent="." unique_id=603202297]
 layout_mode = 0
-offset_left = 441.0
-offset_top = 15.0
-offset_right = 649.0
-offset_bottom = 87.0
+offset_left = 438.0
+offset_top = 4.0
+offset_right = 646.0
+offset_bottom = 76.0
 theme_override_font_sizes/font_size = 52
 text = "Wave 2 :"
 
 [node name="Label" type="Label" parent="." unique_id=543100598]
 layout_mode = 0
-offset_left = 125.0
-offset_top = 7.0
-offset_right = 333.0
-offset_bottom = 79.0
+offset_left = 114.0
+offset_top = 162.0
+offset_right = 322.0
+offset_bottom = 234.0
 theme_override_font_sizes/font_size = 52
 text = "Wave 1 :"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2118133094]
+position = Vector2(171.5, 311.5)
+scale = Vector2(0.6466666, 0.6466666)
+texture = ExtResource("4_hpaht")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1114852816]
+position = Vector2(279.75, 314.75)
+scale = Vector2(0.5833332, 0.59)
+texture = ExtResource("5_dihwt")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=2041924737]
+position = Vector2(495.5, 359.5)
+scale = Vector2(0.6466666, 0.6466666)
+texture = ExtResource("4_hpaht")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=2048766313]
+position = Vector2(603.75, 362.75)
+scale = Vector2(0.5833332, 0.59)
+texture = ExtResource("5_dihwt")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=45955480]
+position = Vector2(496.5, 164.5)
+scale = Vector2(0.6466666, 0.6466666)
+texture = ExtResource("6_asspg")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=88044808]
+position = Vector2(620, 164)
+scale = Vector2(0.5833332, 0.59)
+texture = ExtResource("7_lymil")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1165259880]
+position = Vector2(884, 544)
+scale = Vector2(0.6466666, 0.6466666)
+texture = ExtResource("4_hpaht")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=918765852]
+position = Vector2(1049, 550)
+scale = Vector2(0.5833332, 0.59)
+texture = ExtResource("5_dihwt")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=52338612]
+position = Vector2(874.00006, 242)
+scale = Vector2(0.6466666, 0.6466666)
+texture = ExtResource("6_asspg")
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=1374405902]
+position = Vector2(1059, 237)
+scale = Vector2(0.5833332, 0.59)
+texture = ExtResource("7_lymil")
+
+[node name="Robot1" type="Sprite2D" parent="." unique_id=308021684]
+position = Vector2(953.00006, 138.00002)
+scale = Vector2(0.37666667, 0.37666667)
+texture = ExtResource("11_62g12")
+
+[node name="Lock3" type="Panel" parent="." unique_id=1190117666]
+visible = false
+layout_mode = 0
+offset_left = 824.0
+offset_top = 74.0
+offset_right = 1114.0
+offset_bottom = 603.0
+
+[node name="Lock2" type="Panel" parent="." unique_id=715905475]
+visible = false
+layout_mode = 0
+offset_left = 439.0
+offset_top = 112.0
+offset_right = 669.0
+offset_bottom = 505.0
+
+[node name="Lock" type="Panel" parent="." unique_id=992147147]
+visible = false
+layout_mode = 0
+offset_left = 108.0
+offset_top = 254.0
+offset_right = 338.0
+offset_bottom = 455.0
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="BrickMen/Button" to="BrickMen" method="_on_button_pressed"]
